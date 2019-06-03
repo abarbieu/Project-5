@@ -198,7 +198,7 @@ final class WorldModel
       {
          Point pt = new Point(Integer.parseInt(properties[SMITH_COL]),
             Integer.parseInt(properties[SMITH_ROW]));
-         Entity entity = new Blacksmith(properties[SMITH_ID],
+         Entity entity = new Alien(properties[SMITH_ID],
             pt, imageStore.getImageList(SMITH_KEY));
          this.tryAddEntity(entity);
       }
@@ -245,7 +245,7 @@ final class WorldModel
       {
          Point pt = new Point(Integer.parseInt(properties[MINER_COL]),
             Integer.parseInt(properties[MINER_ROW]));
-         Entity entity = new Miner(properties[MINER_ID],pt,
+         Entity entity = new Rick(properties[MINER_ID],pt,
                  imageStore.getImageList(MINER_KEY),
                  Integer.parseInt(properties[MINER_LIMIT]),0,
             Integer.parseInt(properties[MINER_ACTION_PERIOD]),

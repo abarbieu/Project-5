@@ -32,7 +32,7 @@ public class Ore extends ActiveEntity {
         world.removeEntity(this);
         scheduler.unscheduleAllEvents(this);
 
-        ActimatedEntity blob = new OreBlob(super.getId() + BLOB_ID_SUFFIX,
+        ActimatedEntity blob = new Morty(super.getId() + BLOB_ID_SUFFIX,
                 pos,imageStore.getImageList(BLOB_KEY), super.getActionPeriod() / BLOB_PERIOD_SCALE,
                 BLOB_ANIMATION_MIN +
                         rand.nextInt(BLOB_ANIMATION_MAX - BLOB_ANIMATION_MIN)
