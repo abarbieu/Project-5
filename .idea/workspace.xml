@@ -4,49 +4,7 @@
     <option name="SPLITTER_PROPORTION" value="0.15679443" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6869d8e7-09fa-4831-8fa7-74e890b7e924" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/PathingStrategy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../18Winter225/asgn2-abarbieu" beforeDir="false" afterPath="$PROJECT_DIR$/../../18Winter225/asgn2-abarbieu" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../18Winter225/asgn4-abarbieu" beforeDir="false" afterPath="$PROJECT_DIR$/../../18Winter225/asgn4-abarbieu" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../18Winter225/asgn5-abarbieu" beforeDir="false" afterPath="$PROJECT_DIR$/../../18Winter225/asgn5-abarbieu" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab 6/comparator/TestCases.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab 6/comparator/TestCases.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab 6/exercises/TestCases.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab 6/exercises/TestCases.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Project3-restarted/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Project3/.idea/Project2.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../Project3/.idea/Project2.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Project3/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Project3/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Project3/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Project3/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Project3/src/output/production/Project2/ActimatedEntity.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Project3/src/output/production/Project2/Action.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Project3/src/output/production/Project2/Active.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Project3/src/output/production/Project2/ActiveEntity.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Project3/src/output/production/Project2/Activity.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Project3/src/output/production/Project2/AnimatedEntity.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Project3/src/output/production/Project2/Animation.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Project3/src/output/production/Project2/Background.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Project3/src/output/production/Project2/Blacksmith.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Project3/src/output/production/Project2/Entity.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Project3/src/output/production/Project2/Event.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Project3/src/output/production/Project2/EventComparator.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Project3/src/output/production/Project2/EventScheduler.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Project3/src/output/production/Project2/Functions.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Project3/src/output/production/Project2/ImageStore.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Project3/src/output/production/Project2/META-INF/Project2.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Project3/src/output/production/Project2/Miner.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Project3/src/output/production/Project2/Obstacle.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Project3/src/output/production/Project2/Ore.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Project3/src/output/production/Project2/OreBlob.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Project3/src/output/production/Project2/Point.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Project3/src/output/production/Project2/Quake.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Project3/src/output/production/Project2/Vein.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Project3/src/output/production/Project2/Viewport.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Project3/src/output/production/Project2/VirtualWorld.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Project3/src/output/production/Project2/WorldModel.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Project3/src/output/production/Project2/WorldView.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Project3/src/output/production/Project2/processing-core.jar" beforeDir="false" afterPath="$PROJECT_DIR$/../Project3/src/output/production/Project2/processing-core.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Project3/src/processing-core.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../processing-core.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Mandelbrot/Magic" beforeDir="false" afterPath="$PROJECT_DIR$/../../Mandelbrot/Magic" afterDir="false" />
-    </list>
+    <list default="true" id="6869d8e7-09fa-4831-8fa7-74e890b7e924" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,7 +22,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/AStarPathingStrategy.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
+            <state relative-caret-position="285">
               <caret line="24" selection-start-line="24" selection-end-line="24" />
             </state>
           </provider>
@@ -73,26 +31,18 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/VirtualWorld.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="16" column="45" selection-start-line="16" selection-start-column="45" selection-end-line="16" selection-end-column="45" />
+            <state relative-caret-position="300">
+              <caret line="20" column="67" selection-start-line="20" selection-start-column="67" selection-end-line="20" selection-end-column="67" />
               <folding>
+                <element signature="imports" expanded="true" />
                 <element signature="n#!!doc;n#setup#0;n#VirtualWorld#0" />
                 <element signature="method#draw#0;class#VirtualWorld#0" />
-                <element signature="e#2525#2635#1" />
                 <element signature="method#createDefaultBackground#0;class#VirtualWorld#0" />
                 <element signature="method#createImageColored#0;class#VirtualWorld#0" />
-                <element signature="e#3929#3975#1" />
                 <element signature="method#loadImages#0;class#VirtualWorld#0" />
-                <element signature="e#4171#4287#0" />
-                <element signature="e#4320#4379#0" />
                 <element signature="method#loadWorld#0;class#VirtualWorld#0" />
-                <element signature="e#4525#4634#0" />
-                <element signature="e#4667#4726#0" />
                 <element signature="method#scheduleActions#0;class#VirtualWorld#0" />
-                <element signature="e#4931#5064#1" />
                 <element signature="method#parseCommandLine#0;class#VirtualWorld#0" />
-                <element signature="e#5161#5595#1" />
-                <element signature="e#5188#5585#0" />
                 <element signature="method#main#0;class#VirtualWorld#0" />
               </folding>
             </state>
@@ -102,7 +52,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/WorldModel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1819">
+            <state relative-caret-position="4755">
               <caret line="328" selection-start-line="328" selection-end-line="328" />
               <folding>
                 <element signature="e#2871#2872#0" expanded="true" />
@@ -118,8 +68,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/WorldView.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="25" lean-forward="true" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="25" />
+            <state relative-caret-position="90">
+              <caret line="9" column="25" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="25" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -130,7 +80,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Viewport.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
+            <state relative-caret-position="195">
               <caret line="13" column="21" selection-start-line="13" selection-start-column="21" selection-end-line="13" selection-end-column="21" />
               <folding>
                 <element signature="e#769#770#0" expanded="true" />
@@ -203,7 +153,7 @@
     </replaceStrings>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -276,19 +226,8 @@
         <subPane>
           <expand>
             <path>
-              <item name="Project4" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Project4" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Project4" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Project4" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Project4" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Project4" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Entities" type="462c0819:PsiDirectoryNode" />
+              <item name="project5" type="b2602c69:ProjectViewProjectNode" />
+              <item name="project5" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -364,17 +303,20 @@
       <workItem from="1559346147581" duration="5753000" />
       <workItem from="1559425599866" duration="3689000" />
       <workItem from="1559600154621" duration="1169000" />
+      <workItem from="1559601793809" duration="270000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="49816000" />
+    <option name="totallyTimeSpent" value="50086000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-6" y="-6" width="1549" height="837" extended-state="6" />
+    <frame x="0" y="0" width="1680" height="1050" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49926144" visible="true" weight="0.26291078" />
+      <window_info id="Image Layers" />
+      <window_info id="Capture Tool" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49926144" visible="true" weight="0.26617828" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="UI Designer" order="3" />
@@ -383,7 +325,7 @@
       <window_info anchor="bottom" id="Inspection Results" order="1" weight="0.49080622" />
       <window_info anchor="bottom" id="Message" order="2" />
       <window_info anchor="bottom" id="Find" order="3" weight="0.32956153" />
-      <window_info active="true" anchor="bottom" id="Run" order="4" visible="true" weight="0.15983027" />
+      <window_info anchor="bottom" id="Run" order="4" weight="0.15983027" />
       <window_info anchor="bottom" id="Debug" order="5" weight="0.39886847" />
       <window_info anchor="bottom" id="Cvs" order="6" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="7" weight="0.4" />
@@ -394,6 +336,8 @@
       <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="13" />
       <window_info anchor="bottom" id="Messages" order="14" weight="0.32956153" />
+      <window_info anchor="right" id="Capture Analysis" />
+      <window_info anchor="right" id="Theme Preview" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -473,13 +417,7 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Entities/Point.java" />
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_201/src.zip!/java/util/Optional.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="217">
-          <caret line="132" column="13" selection-start-line="132" selection-start-column="13" selection-end-line="132" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_201/src.zip!/java/util/Optional.java" />
     <entry file="file://$PROJECT_DIR$/src/Entities/AnimatedEntity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
@@ -608,9 +546,10 @@
           </nodes>
           <notes />
           <edges />
-          <settings layout="Hierarchic Group" zoom="1.0" x="57.5" y="10.0" />
+          <settings layout="Hierarchic Group" zoom="1.0" x="58.0" y="10.0" />
           <SelectedNodes />
           <Categories />
+          <SCOPE>All</SCOPE>
         </state>
       </provider>
     </entry>
@@ -672,7 +611,7 @@
           </nodes>
           <notes />
           <edges />
-          <settings layout="Hierarchic Group" zoom="0.6286379511059371" x="464.5" y="409.5" />
+          <settings layout="Hierarchic Group" zoom="0.6286379511059371" x="465.0" y="410.0" />
           <SelectedNodes />
           <Categories />
           <SCOPE>All</SCOPE>
@@ -682,24 +621,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/AStarPathingStrategy.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
+        <state relative-caret-position="285">
           <caret line="24" selection-start-line="24" selection-end-line="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/WorldView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="25" lean-forward="true" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="25" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/WorldModel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1819">
+        <state relative-caret-position="4755">
           <caret line="328" selection-start-line="328" selection-end-line="328" />
           <folding>
             <element signature="e#2871#2872#0" expanded="true" />
@@ -711,9 +640,19 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/WorldView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="9" column="25" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Viewport.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
+        <state relative-caret-position="195">
           <caret line="13" column="21" selection-start-line="13" selection-start-column="21" selection-end-line="13" selection-end-column="21" />
           <folding>
             <element signature="e#769#770#0" expanded="true" />
@@ -730,26 +669,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/VirtualWorld.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="16" column="45" selection-start-line="16" selection-start-column="45" selection-end-line="16" selection-end-column="45" />
+        <state relative-caret-position="300">
+          <caret line="20" column="67" selection-start-line="20" selection-start-column="67" selection-end-line="20" selection-end-column="67" />
           <folding>
+            <element signature="imports" expanded="true" />
             <element signature="n#!!doc;n#setup#0;n#VirtualWorld#0" />
             <element signature="method#draw#0;class#VirtualWorld#0" />
-            <element signature="e#2525#2635#1" />
             <element signature="method#createDefaultBackground#0;class#VirtualWorld#0" />
             <element signature="method#createImageColored#0;class#VirtualWorld#0" />
-            <element signature="e#3929#3975#1" />
             <element signature="method#loadImages#0;class#VirtualWorld#0" />
-            <element signature="e#4171#4287#0" />
-            <element signature="e#4320#4379#0" />
             <element signature="method#loadWorld#0;class#VirtualWorld#0" />
-            <element signature="e#4525#4634#0" />
-            <element signature="e#4667#4726#0" />
             <element signature="method#scheduleActions#0;class#VirtualWorld#0" />
-            <element signature="e#4931#5064#1" />
             <element signature="method#parseCommandLine#0;class#VirtualWorld#0" />
-            <element signature="e#5161#5595#1" />
-            <element signature="e#5188#5585#0" />
             <element signature="method#main#0;class#VirtualWorld#0" />
           </folding>
         </state>
