@@ -12,7 +12,7 @@
     <orderEntry type="module-library">
       <library>
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/../core.jar!/" />
+          <root url="jar://$MODULE_DIR$/core.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
