@@ -11,8 +11,8 @@ public final class VirtualWorld
     private static final int WORLD_WIDTH_SCALE = 2;
     private static final int WORLD_HEIGHT_SCALE = 2;
 
-    private static final int VIEW_WIDTH = 640*WORLD_WIDTH_SCALE;
-    private static final int VIEW_HEIGHT = 480*WORLD_HEIGHT_SCALE;
+    private static final int VIEW_WIDTH = 640 * WORLD_WIDTH_SCALE;
+    private static final int VIEW_HEIGHT = 480 * WORLD_HEIGHT_SCALE;
     private static final int TILE_WIDTH = 32;
     private static final int TILE_HEIGHT = 32;
 
@@ -112,6 +112,18 @@ public final class VirtualWorld
         }*/
 
     }
+
+    public void mousePressed(){
+        worldEvent(new Point(mouseX,mouseY));
+    }
+
+    public void worldEvent(Point pos){
+        
+    }
+
+
+
+
 
     public static Background createDefaultBackground(ImageStore imageStore) {
         return new Background(DEFAULT_IMAGE_NAME,
