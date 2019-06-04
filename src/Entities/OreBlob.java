@@ -3,7 +3,7 @@ import processing.core.PImage;
 import java.util.List;
 import java.util.Optional;
 
-public class Morty extends ActimatedEntity {
+public class OreBlob extends ActimatedEntity {
     private String id;
     private Point position;
     private List<PImage> images;
@@ -11,11 +11,9 @@ public class Morty extends ActimatedEntity {
     private int actionPeriod;
     private int animationPeriod;
     private PathingStrategy pathStrat;
-    public static boolean state = true;
-
     private static final String QUAKE_KEY = "quake";
 
-    public Morty(String id, Point position, List<PImage> images, int actionPeriod, int animationPeriod, PathingStrategy p) {
+    public OreBlob(String id, Point position, List<PImage> images, int actionPeriod, int animationPeriod, PathingStrategy p) {
         super(id, position, animationPeriod, images, 0, actionPeriod,p);
     }
 
@@ -25,10 +23,6 @@ public class Morty extends ActimatedEntity {
 
         Optional<Entity> blobTarget = super.getPosition().findNearest(world,
                 Vein.class);
-
-        if (!state)
-            blobTarget = super.getPosition().findNearest(world,
-                    Rick.class);
 
         long nextPeriod = super.getActionPeriod();
 
