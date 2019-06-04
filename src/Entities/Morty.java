@@ -21,7 +21,7 @@ public class Morty extends ActimatedEntity {
                                 ImageStore imageStore, EventScheduler scheduler) {
 
 
-        Optional<Entity> target = super.getPosition().findNearest(world, Rick.class);
+        Optional<Entity> target = super.getPosition().findNearest(world, OreBlob.class);
 
         if (target.isPresent()) {
             this.moveToRick(world, target.get(), scheduler);
@@ -33,8 +33,15 @@ public class Morty extends ActimatedEntity {
                 nextPeriod);
     }
 
-    private void moveToRick(WorldModel world, Entity target, EventScheduler scheduler)
+    private boolean moveToRick(WorldModel world, Entity target, EventScheduler scheduler)
     {
-        super.moveNextPos(world, target, scheduler);
+        if (super.getPosition().adjacent(target.getPosition())) {
+            world.removeEntity(target);
+            scheduler.unscheduleAllEvents(target);
+            return true;
+        } else {
+
+            return super.moveNextPos(world, target, scheduler);
+        }
     }
 }

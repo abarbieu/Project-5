@@ -144,9 +144,11 @@ public final class VirtualWorld
             world.setBackgroundCell(neighbor, tree);
 
         }
+        Background tree = new Background("tree", imageStore.getImageList("rocks"));
+        world.setBackgroundCell(pos, tree);
 
-        Entity entity = new BadGuy("badGuy", pos, imageStore.getImageList("badGuy"), 1, 0, new AStarPathingStrategy());
-        world.addEntity(entity);
+//        Entity entity = new BadGuy("badGuy", pos, imageStore.getImageList("badGuy"), 1, 0, new AStarPathingStrategy());
+//        world.addEntity(entity);
 
         Entity morty = new Morty("morty", pos, imageStore.getImageList("morty"), 1, 0, new AStarPathingStrategy());
         world.addEntity(morty);
