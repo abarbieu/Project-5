@@ -198,7 +198,7 @@ final class WorldModel
       {
          Point pt = new Point(Integer.parseInt(properties[SMITH_COL]),
             Integer.parseInt(properties[SMITH_ROW]));
-         Entity entity = new Alien(properties[SMITH_ID],
+         Entity entity = new PickleRick(properties[SMITH_ID],
             pt, imageStore.getImageList(SMITH_KEY));
          this.tryAddEntity(entity);
       }

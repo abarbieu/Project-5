@@ -17,7 +17,7 @@ public class Rick extends ActimatedEntity {
     public void executeActivity(WorldModel world, ImageStore imageStore, EventScheduler scheduler) {
         if (resourceCount >= resourceLimit) {
             Optional<Entity> fullTarget = super.getPosition().findNearest(world,
-                    Alien.class);
+                    PickleRick.class);
 
             if (fullTarget.isPresent() &&
                     this.moveToFull(world, fullTarget.get(), scheduler)) {

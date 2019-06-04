@@ -56,4 +56,8 @@ public abstract class ActimatedEntity extends AnimatedEntity implements Active {
                 p1.x == p2.x && p1.y + 1 == p2.y ||
                 p1.x == p2.x && p1.y - 1 == p2.y;
     }
+
+    public void setActionPeriod(int actionPeriod) {
+        this.actionPeriod = actionPeriod;
+    }
 }

@@ -82,6 +82,7 @@ background grass 16 0
 background grass 17 0
 background grass 18 0
 background rocks 19 0
+background grass 19 14
 background grass 20 0
 background grass 21 0
 background grass 22 0
@@ -641,7 +642,6 @@ background grass 15 14
 background grass 16 14
 background grass 17 14
 background grass 18 14
-background rocks 19 14
 background grass 20 14
 background grass 21 14
 background grass 22 14

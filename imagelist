@@ -1,16 +1,16 @@
-blacksmith newImages/badGuy.bmp
-blob newImages/morty.bmp 255 255 255 0
-blob newImages/morty.bmp 255 255 255 0
-blob inewImages/morty.bmp 255 255 255 0
-blob newImages/morty.bmp 255 255 255 0
-blob newImages/morty.bmp 255 255 255 0
-blob newImages/morty.bmp 255 255 255 0
-blob newImages/morty.bmp 255 255 255 0
-blob newImages/morty.bmp 255 255 255 0
-blob newImages/morty.bmp 255 255 255 0
-blob newImages/morty.bmp 255 255 255 0
-blob newImages/morty.bmp 255 255 255 0
-blob newImages/morty.bmp 255 255 255 0
+blacksmith newImages/pickleRick.bmp
+blob images/blob1.bmp 255 255 255 0
+blob images/blob2.bmp 255 255 255 0
+blob nimages/blob3.bmp 255 255 255 0
+blob images/blob4.bmp 255 255 255 0
+blob images/blob5.bmp 255 255 255 0
+blob nimages/blob6.bmp 255 255 255 0
+blob images/blob7.bmp 255 255 255 0
+blob images/blob8.bmp 255 255 255 0
+blob images/blob8.bmp 255 255 255 0
+blob images/blob10.bmp 255 255 255 0
+blob images/blob11.bmp 255 255 255 0
+blob images/blob12.bmp 255 255 255 0
 grass newImages/background.bmp
 miner newImages/rick.bmp 252 252 252 0
 miner newImages/rick.bmp 252 252 252 0
@@ -28,3 +28,5 @@ quake images/quake6.bmp 255 255 255 0
 rocks newImages/tree.bmp
 vein newImages/powerPlant.bmp
 background_default images/none.bmp
+badGuy newImages/badGuy.bmp 252 252 252 0
+morty newImages/morty.png 252 252 252 0
