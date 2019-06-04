@@ -129,6 +129,7 @@ public final class VirtualWorld
 
     public void worldEvent(Point pos){
 
+        System.out.println(pos);
         Predicate<Point> canPassThrough = (pt) -> !pos.isOccupied(world);
         List<Point> neighbors = PathingStrategy.DIAGONAL_CARDINAL_NEIGHBORS.apply(pos)
                 .filter(canPassThrough).collect(Collectors.toList());
