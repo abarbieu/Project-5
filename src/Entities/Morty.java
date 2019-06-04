@@ -21,7 +21,7 @@ public class Morty extends ActimatedEntity {
     public void executeActivity(WorldModel world,
                                 ImageStore imageStore, EventScheduler scheduler) {
         Optional<Entity> blobTarget = super.getPosition().findNearest(world,
-                Vein.class);
+                Rick.class);
         long nextPeriod = super.getActionPeriod();
 
         if (blobTarget.isPresent()) {

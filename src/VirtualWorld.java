@@ -140,13 +140,13 @@ public final class VirtualWorld
 
         for (Point neighbor:neighbors)
         {
-            Obstacle tree = new Obstacle("tree", neighbor, imageStore.getImageList("rocks"));
-            world.addEntity(tree);
+            Background tree = new Background("tree", imageStore.getImageList("rocks"));
+            world.setBackgroundCell(neighbor, tree);
 
         }
 
-        Obstacle tree = new Obstacle("badGuy", pos, imageStore.getImageList("badGuy"));
-        world.addEntity(tree);
+        ActimatedEntity entity = new BadGuy("badGuy", pos, imageStore.getImageList("badGuy"), 5, 0, new AStarPathingStrategy());
+        world.addEntity(entity);
     }
 
 

@@ -5,8 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6869d8e7-09fa-4831-8fa7-74e890b7e924" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/Project2.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Project2.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imagelist" beforeDir="false" afterPath="$PROJECT_DIR$/imagelist" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UML/Old/CurrentReal.graphml" beforeDir="false" afterPath="$PROJECT_DIR$/UML/Old/CurrentReal.graphml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UML/Old/Interface.graphml" beforeDir="false" afterPath="$PROJECT_DIR$/UML/Old/Interface.graphml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entities/Alien.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entities/PickleRick.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entities/Morty.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entities/Morty.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entities/Rick.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entities/Rick.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/VirtualWorld.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/VirtualWorld.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/WorldModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/WorldModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/output/production/Project2/Alien.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/output/production/Project2/Rick.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/output/production/Project2/Rick.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/output/production/Project2/WorldModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/output/production/Project2/WorldModel.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -25,8 +35,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/VirtualWorld.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="445">
-              <caret line="147" column="80" lean-forward="true" selection-start-line="147" selection-start-column="80" selection-end-line="147" selection-end-column="80" />
+            <state relative-caret-position="354">
+              <caret line="148" column="32" lean-forward="true" selection-start-line="148" selection-start-column="32" selection-end-line="148" selection-end-column="32" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -35,19 +45,35 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gaia.sav">
+        <entry file="file://$PROJECT_DIR$/src/Background.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="265">
-              <caret line="78" column="21" selection-start-line="78" selection-start-column="21" selection-end-line="78" selection-end-column="21" />
+            <state relative-caret-position="135">
+              <caret line="9" column="21" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="51" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/imagelist">
+        <entry file="file://$PROJECT_DIR$/src/Entities/Morty.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
-              <caret line="30" column="41" selection-start-line="30" selection-start-column="41" selection-end-line="30" selection-end-column="41" />
+            <state relative-caret-position="404">
+              <caret line="38" lean-forward="true" selection-start-line="38" selection-end-line="38" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Entities/BadGuy.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="172">
+              <caret line="35" column="73" selection-start-line="35" selection-start-column="73" selection-end-line="35" selection-end-column="73" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <marker date="1559679254714" expanded="true" signature="130:770" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -55,41 +81,37 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/WorldModel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3540">
-              <caret line="247" column="32" selection-start-line="247" selection-start-column="29" selection-end-line="247" selection-end-column="32" />
+            <state relative-caret-position="128">
+              <caret line="192" lean-forward="true" selection-start-line="192" selection-end-line="192" />
               <folding>
                 <element signature="e#2871#2872#0" expanded="true" />
                 <element signature="e#2919#2920#0" expanded="true" />
-                <element signature="e#10192#10193#0" expanded="true" />
-                <element signature="e#10219#10220#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Entities/Rick.java">
+        <entry file="file://$PROJECT_DIR$/src/Entities/PickleRick.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="14" column="5" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
+            <state relative-caret-position="60">
+              <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ImageStore.java">
+        <entry file="file://$PROJECT_DIR$/src/Entities/ActimatedEntity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="5" column="12" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="12" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/PathingStrategy.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="555">
-              <caret line="41" column="1" selection-start-line="41" selection-start-column="1" selection-end-line="41" selection-end-column="1" />
+            <state relative-caret-position="210">
+              <caret line="23" column="32" selection-start-line="23" selection-start-column="32" selection-end-line="23" selection-end-column="32" />
+              <folding>
+                <element signature="method#ActimatedEntity#0;class#ActimatedEntity#0" />
+                <element signature="method#scheduleAction#0;class#ActimatedEntity#0" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -104,20 +126,22 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/README.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor />
-              <second_editor />
+        <entry file="file://$PROJECT_DIR$/src/Entities/Rick.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="476">
+              <caret line="33" column="43" selection-start-line="33" selection-start-column="43" selection-end-line="33" selection-end-column="43" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/SingleStepPath.java">
+        <entry file="file://$PROJECT_DIR$/src/Entities/Obstacle.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="27" column="5" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="5" />
+            <state relative-caret-position="60">
+              <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -136,11 +160,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>nextPo</find>
-      <find>createMin</find>
-      <find>animat</find>
-      <find>addE</find>
-      <find>addEntity</find>
       <find>{}</find>
       <find>pos</find>
       <find>this.id</find>
@@ -164,8 +183,13 @@
       <find>is</find>
       <find>Rick</find>
       <find>key</find>
-      <find>ric</find>
       <find>19 14</find>
+      <find>mousa</find>
+      <find>p</find>
+      <find>rick</find>
+      <find>ric</find>
+      <find>mous</find>
+      <find>p.</find>
     </findStrings>
     <replaceStrings>
       <replace>pos</replace>
@@ -187,7 +211,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/project 1 starter code/Action.java" />
         <option value="$PROJECT_DIR$/project 1 starter code/Activity.java" />
         <option value="$PROJECT_DIR$/project 1 starter code/Animation.java" />
         <option value="$PROJECT_DIR$/project 1 starter code/Action/Action.java" />
@@ -234,8 +257,11 @@
         <option value="$PROJECT_DIR$/src/PathingStrategy.java" />
         <option value="$PROJECT_DIR$/src/WorldModel.java" />
         <option value="$PROJECT_DIR$/gaia.sav" />
-        <option value="$PROJECT_DIR$/src/VirtualWorld.java" />
         <option value="$PROJECT_DIR$/imagelist" />
+        <option value="$PROJECT_DIR$/src/Entities/PickleRick.java" />
+        <option value="$PROJECT_DIR$/src/VirtualWorld.java" />
+        <option value="$PROJECT_DIR$/src/Entities/BadGuy.java" />
+        <option value="$PROJECT_DIR$/src/Entities/Morty.java" />
       </list>
     </option>
   </component>
@@ -347,12 +373,12 @@
       <workItem from="1559600154621" duration="1169000" />
       <workItem from="1559601793809" duration="270000" />
       <workItem from="1559665995459" duration="457000" />
-      <workItem from="1559673811718" duration="958000" />
+      <workItem from="1559673811718" duration="4401000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="58171000" />
+    <option name="totallyTimeSpent" value="61614000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
@@ -368,9 +394,9 @@
       <window_info anchor="bottom" id="Duplicates" order="0" weight="0.48514852" />
       <window_info anchor="bottom" id="Inspection Results" order="1" weight="0.49080622" />
       <window_info anchor="bottom" id="Message" order="2" />
-      <window_info active="true" anchor="bottom" id="Find" order="3" visible="true" weight="0.32857144" />
-      <window_info anchor="bottom" id="Run" order="4" visible="true" weight="0.15918367" />
-      <window_info anchor="bottom" id="Debug" order="5" weight="0.39886847" />
+      <window_info anchor="bottom" id="Find" order="3" weight="0.32857144" />
+      <window_info anchor="bottom" id="Run" order="4" weight="0.15918367" />
+      <window_info anchor="bottom" id="Debug" order="5" visible="true" weight="0.39795917" />
       <window_info anchor="bottom" id="Cvs" order="6" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="7" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="8" />
@@ -391,26 +417,28 @@
       <window_info anchor="right" id="Theme Preview" order="8" />
     </layout>
     <layout-to-restore>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49926144" visible="true" weight="0.25955734" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49926144" visible="true" weight="0.2753358" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="UI Designer" order="3" />
       <window_info id="Favorites" order="4" sideWeight="0.50073856" side_tool="true" weight="0.2562039" />
+      <window_info id="Image Layers" order="5" />
+      <window_info id="Capture Tool" order="6" />
       <window_info anchor="bottom" id="Duplicates" order="0" weight="0.48514852" />
       <window_info anchor="bottom" id="Inspection Results" order="1" weight="0.49080622" />
       <window_info anchor="bottom" id="Message" order="2" />
-      <window_info anchor="bottom" id="Find" order="3" weight="0.32956153" />
-      <window_info active="true" anchor="bottom" id="Run" order="4" visible="true" weight="0.16548797" />
+      <window_info anchor="bottom" id="Find" order="3" weight="0.32857144" />
+      <window_info anchor="bottom" id="Run" order="4" visible="true" weight="0.15918367" />
       <window_info anchor="bottom" id="Debug" order="5" weight="0.39886847" />
       <window_info anchor="bottom" id="Cvs" order="6" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="7" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="8" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="10" />
-      <window_info anchor="bottom" id="Terminal" order="11" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.32956153" />
       <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="13" />
-      <window_info anchor="bottom" id="Messages" order="14" weight="0.32956153" />
+      <window_info anchor="bottom" id="Messages" order="14" weight="0.32857144" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -418,13 +446,14 @@
       <window_info anchor="right" id="Database" order="4" />
       <window_info anchor="right" id="Maven" order="5" />
       <window_info anchor="right" id="Palette&#9;" order="6" />
+      <window_info anchor="right" id="Capture Analysis" order="7" />
+      <window_info anchor="right" id="Theme Preview" order="8" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Action/Animation.java" />
     <entry file="file://$PROJECT_DIR$/src/Entities/Blacksmith.java" />
     <entry file="uml://JavaScript-modules-diagram/C:/Users/happy/github/Project3-restarted/src/Entities;C:/Users/happy/github/Project3-restarted/src/Action;">
       <provider selected="true" editor-type-id="UmlEditorProvider">
@@ -510,16 +539,6 @@
     <entry file="file://$PROJECT_DIR$/src/Functions.java" />
     <entry file="file://$PROJECT_DIR$/src/Entities/OreBlob.java" />
     <entry file="file://$PROJECT_DIR$/src/Entities/Miner.java" />
-    <entry file="file://$PROJECT_DIR$/src/Entities/Obstacle.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="7" lean-forward="true" selection-start-column="7" selection-end-column="7" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../../aStar/src/PathingMain.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="489">
@@ -557,17 +576,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Entities/ActimatedEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="29" column="9" selection-start-line="29" selection-start-column="9" selection-end-line="29" selection-end-column="9" />
-          <folding>
-            <element signature="method#ActimatedEntity#0;class#ActimatedEntity#0" />
-            <element signature="method#scheduleAction#0;class#ActimatedEntity#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Entities/ActiveEntity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -579,13 +587,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
           <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Entities/Alien.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -603,13 +604,6 @@
           <folding>
             <element signature="e#591#592#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Entities/Morty.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -642,16 +636,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="502">
           <caret line="40" column="30" lean-forward="true" selection-start-line="40" selection-start-column="30" selection-end-line="40" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Background.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="6" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -739,26 +723,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/WorldModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3540">
-          <caret line="247" column="32" selection-start-line="247" selection-start-column="29" selection-end-line="247" selection-end-column="32" />
-          <folding>
-            <element signature="e#2871#2872#0" expanded="true" />
-            <element signature="e#2919#2920#0" expanded="true" />
-            <element signature="e#10192#10193#0" expanded="true" />
-            <element signature="e#10219#10220#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Entities/Rick.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="14" column="5" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ImageStore.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -770,13 +734,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="555">
           <caret line="41" column="1" selection-start-line="41" selection-start-column="1" selection-end-line="41" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Point.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="930">
-          <caret line="64" column="37" selection-start-line="64" selection-start-column="35" selection-end-line="64" selection-end-column="37" />
         </state>
       </provider>
     </entry>
@@ -805,20 +762,107 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/VirtualWorld.java">
+    <entry file="file://$PROJECT_DIR$/imagelist">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="445">
-          <caret line="147" column="80" lean-forward="true" selection-start-line="147" selection-start-column="80" selection-end-line="147" selection-end-column="80" />
+        <state relative-caret-position="450">
+          <caret line="30" column="41" selection-start-line="30" selection-start-column="41" selection-end-line="30" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Entities/Obstacle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/imagelist">
+    <entry file="file://$PROJECT_DIR$/src/Entities/PickleRick.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="30" column="41" selection-start-line="30" selection-start-column="41" selection-end-line="30" selection-end-column="41" />
+        <state relative-caret-position="60">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/WorldModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="128">
+          <caret line="192" lean-forward="true" selection-start-line="192" selection-end-line="192" />
+          <folding>
+            <element signature="e#2871#2872#0" expanded="true" />
+            <element signature="e#2919#2920#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Point.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="930">
+          <caret line="64" column="37" selection-start-line="64" selection-start-column="35" selection-end-line="64" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Background.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="21" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="51" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Entities/Rick.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="33" column="43" selection-start-line="33" selection-start-column="43" selection-end-line="33" selection-end-column="43" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Entities/ActimatedEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="23" column="32" selection-start-line="23" selection-start-column="32" selection-end-line="23" selection-end-column="32" />
+          <folding>
+            <element signature="method#ActimatedEntity#0;class#ActimatedEntity#0" />
+            <element signature="method#scheduleAction#0;class#ActimatedEntity#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/VirtualWorld.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="354">
+          <caret line="148" column="32" lean-forward="true" selection-start-line="148" selection-start-column="32" selection-end-line="148" selection-end-column="32" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Entities/BadGuy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="172">
+          <caret line="35" column="73" selection-start-line="35" selection-start-column="73" selection-end-line="35" selection-end-column="73" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <marker date="1559679254714" expanded="true" signature="130:770" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Entities/Morty.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="404">
+          <caret line="38" lean-forward="true" selection-start-line="38" selection-end-line="38" />
         </state>
       </provider>
     </entry>
@@ -878,7 +922,6 @@
             <option name="proportions">
               <list>
                 <option value="0.2" />
-                <option value="0.6" />
               </list>
             </option>
           </splitter-proportions>
