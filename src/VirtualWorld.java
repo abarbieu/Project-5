@@ -1,7 +1,9 @@
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
-
+import java.util.function.Predicate;
+import java.util.stream.Collectors;
+import java.util.List;
 import processing.core.*;
 
 public final class VirtualWorld
@@ -35,6 +37,7 @@ public final class VirtualWorld
     private static final double FASTER_SCALE = 0.25;
     private static final double FASTEST_SCALE = 0.10;
 
+
     private static double timeScale = 1.0;
 
     private ImageStore imageStore;
@@ -44,6 +47,13 @@ public final class VirtualWorld
 
     private long next_time;
 
+    private static final int MINER_ANIMATION_PERIOD = 6;
+    private static final int MINER_ACTION_PERIOD = 5;
+    private static final int MINER_LIMIT = 4;
+    private static final int MINER_ROW = 3;
+    private static final int MINER_COL = 2;
+    private static final int MINER_ID = 1;
+    private static final String MINER_KEY = "miner";
     public void settings() {
         size(VIEW_WIDTH, VIEW_HEIGHT);
     }
@@ -114,15 +124,29 @@ public final class VirtualWorld
     }
 
     public void mousePressed(){
-        worldEvent(new Point(mouseX,mouseY));
+        worldEvent(new Point(mouseX/TILE_WIDTH ,mouseY/TILE_HEIGHT));
     }
 
     public void worldEvent(Point pos){
-        
+
+        Predicate<Point> canPassThrough = (pt) -> !pos.isOccupied(world);
+        List<Point> neighbors = PathingStrategy.DIAGONAL_CARDINAL_NEIGHBORS.apply(pos)
+                .filter(canPassThrough).collect(Collectors.toList());
+
+        System.out.println(neighbors.size());
+        if (neighbors.size() < 8)
+            return;
+
+        for (Point neighbor:neighbors)
+        {
+            Obstacle tree = new Obstacle("tree", neighbor, imageStore.getImageList("rocks"));
+            world.addEntity(tree);
+
+        }
+
+        Obstacle tree = new Obstacle("tree", pos, imageStore.getImageList("rocks"));
+        world.addEntity(tree);
     }
-
-
-
 
 
     public static Background createDefaultBackground(ImageStore imageStore) {
