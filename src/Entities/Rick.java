@@ -3,12 +3,12 @@ import processing.core.PImage;
 import java.util.List;
 import java.util.Optional;
 
-public class Miner extends ActimatedEntity {
+public class Rick extends ActimatedEntity {
     private int resourceLimit;
     private int resourceCount;
 
 
-    public Miner(String id, Point position, List<PImage> images, int resourceLimit, int resourceCount, int actionPeriod, int animationPeriod,PathingStrategy p) {
+    public Rick(String id, Point position, List<PImage> images, int resourceLimit, int resourceCount, int actionPeriod, int animationPeriod, PathingStrategy p) {
         super(id, position, animationPeriod, images, 0, actionPeriod,p);
         this.resourceLimit = resourceLimit;
         this.resourceCount = resourceCount;
@@ -17,7 +17,7 @@ public class Miner extends ActimatedEntity {
     public void executeActivity(WorldModel world, ImageStore imageStore, EventScheduler scheduler) {
         if (resourceCount >= resourceLimit) {
             Optional<Entity> fullTarget = super.getPosition().findNearest(world,
-                    Blacksmith.class);
+                    Alien.class);
 
             if (fullTarget.isPresent() &&
                     this.moveToFull(world, fullTarget.get(), scheduler)) {
@@ -66,7 +66,7 @@ public class Miner extends ActimatedEntity {
     private boolean transformNotFull(WorldModel world,
                                      EventScheduler scheduler, ImageStore imageStore) {
         if (this.resourceCount >= this.resourceLimit) {
-            ActimatedEntity miner = new Miner(super.getId(), super.getPosition(),
+            ActimatedEntity miner = new Rick(super.getId(), super.getPosition(),
                     super.getImages(), this.resourceLimit, this.resourceLimit,
                     super.getActionPeriod(), super.getAnimationPeriod(),super.getStrat());
 
@@ -80,7 +80,7 @@ public class Miner extends ActimatedEntity {
 
     private void transformFull(WorldModel world,
                                EventScheduler scheduler, ImageStore imageStore) {
-        ActimatedEntity miner = new Miner(super.getId(), super.getPosition(), super.getImages(), this.resourceLimit, 0,
+        ActimatedEntity miner = new Rick(super.getId(), super.getPosition(), super.getImages(), this.resourceLimit, 0,
                 super.getActionPeriod(), super.getAnimationPeriod(),super.getStrat());
 
         replaceMe(world, scheduler, imageStore, miner);

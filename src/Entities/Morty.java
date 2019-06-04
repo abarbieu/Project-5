@@ -3,7 +3,7 @@ import processing.core.PImage;
 import java.util.List;
 import java.util.Optional;
 
-public class OreBlob extends ActimatedEntity {
+public class Morty extends ActimatedEntity {
     private String id;
     private Point position;
     private List<PImage> images;
@@ -14,7 +14,7 @@ public class OreBlob extends ActimatedEntity {
 
     private static final String QUAKE_KEY = "quake";
 
-    public OreBlob(String id, Point position, List<PImage> images, int actionPeriod, int animationPeriod,PathingStrategy p) {
+    public Morty(String id, Point position, List<PImage> images, int actionPeriod, int animationPeriod, PathingStrategy p) {
         super(id, position, animationPeriod, images, 0, actionPeriod,p);
     }
 
