@@ -147,6 +147,8 @@ public final class VirtualWorld
 
         ActimatedEntity entity = new BadGuy("badGuy", pos, imageStore.getImageList("badGuy"), 5, 0, new AStarPathingStrategy());
         world.addEntity(entity);
+
+        Morty.state = false;
     }
 
 

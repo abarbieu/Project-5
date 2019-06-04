@@ -11,6 +11,7 @@ public class Morty extends ActimatedEntity {
     private int actionPeriod;
     private int animationPeriod;
     private PathingStrategy pathStrat;
+    public static boolean state = true;
 
     private static final String QUAKE_KEY = "quake";
 
@@ -20,8 +21,15 @@ public class Morty extends ActimatedEntity {
 
     public void executeActivity(WorldModel world,
                                 ImageStore imageStore, EventScheduler scheduler) {
+
+
         Optional<Entity> blobTarget = super.getPosition().findNearest(world,
-                Rick.class);
+                Vein.class);
+
+        if (!state)
+            blobTarget = super.getPosition().findNearest(world,
+                    Rick.class);
+
         long nextPeriod = super.getActionPeriod();
 
         if (blobTarget.isPresent()) {

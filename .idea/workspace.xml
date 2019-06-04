@@ -5,18 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6869d8e7-09fa-4831-8fa7-74e890b7e924" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/Project2.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Project2.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UML/Old/CurrentReal.graphml" beforeDir="false" afterPath="$PROJECT_DIR$/UML/Old/CurrentReal.graphml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UML/Old/Interface.graphml" beforeDir="false" afterPath="$PROJECT_DIR$/UML/Old/Interface.graphml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entities/Alien.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entities/PickleRick.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Entities/Morty.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entities/Morty.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entities/Rick.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entities/Rick.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/VirtualWorld.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/VirtualWorld.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/WorldModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/WorldModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/output/production/Project2/Alien.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/output/production/Project2/Rick.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/output/production/Project2/Rick.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/output/production/Project2/WorldModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/output/production/Project2/WorldModel.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -32,11 +21,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/VirtualWorld.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="354">
-              <caret line="148" column="32" lean-forward="true" selection-start-line="148" selection-start-column="32" selection-end-line="148" selection-end-column="32" />
+            <state relative-caret-position="279">
+              <caret line="143" column="46" selection-start-line="143" selection-start-column="46" selection-end-line="143" selection-end-column="46" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -56,11 +45,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Entities/Morty.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="404">
-              <caret line="38" lean-forward="true" selection-start-line="38" selection-end-line="38" />
+            <state relative-caret-position="420">
+              <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
             </state>
           </provider>
         </entry>
@@ -68,11 +57,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Entities/BadGuy.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="172">
-              <caret line="35" column="73" selection-start-line="35" selection-start-column="73" selection-end-line="35" selection-end-column="73" />
+            <state relative-caret-position="375">
+              <caret line="25" column="1" lean-forward="true" selection-start-line="25" selection-start-column="1" selection-end-line="25" selection-end-column="1" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <marker date="1559679254714" expanded="true" signature="130:770" ph="..." />
+                <marker date="1559680205004" expanded="true" signature="130:744" ph="..." />
               </folding>
             </state>
           </provider>
@@ -82,7 +71,7 @@
         <entry file="file://$PROJECT_DIR$/src/WorldModel.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="128">
-              <caret line="192" lean-forward="true" selection-start-line="192" selection-end-line="192" />
+              <caret line="192" selection-start-line="192" selection-end-line="192" />
               <folding>
                 <element signature="e#2871#2872#0" expanded="true" />
                 <element signature="e#2919#2920#0" expanded="true" />
@@ -259,9 +248,9 @@
         <option value="$PROJECT_DIR$/gaia.sav" />
         <option value="$PROJECT_DIR$/imagelist" />
         <option value="$PROJECT_DIR$/src/Entities/PickleRick.java" />
-        <option value="$PROJECT_DIR$/src/VirtualWorld.java" />
         <option value="$PROJECT_DIR$/src/Entities/BadGuy.java" />
         <option value="$PROJECT_DIR$/src/Entities/Morty.java" />
+        <option value="$PROJECT_DIR$/src/VirtualWorld.java" />
       </list>
     </option>
   </component>
@@ -373,12 +362,12 @@
       <workItem from="1559600154621" duration="1169000" />
       <workItem from="1559601793809" duration="270000" />
       <workItem from="1559665995459" duration="457000" />
-      <workItem from="1559673811718" duration="4401000" />
+      <workItem from="1559673811718" duration="4776000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="61614000" />
+    <option name="totallyTimeSpent" value="61989000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
@@ -395,8 +384,8 @@
       <window_info anchor="bottom" id="Inspection Results" order="1" weight="0.49080622" />
       <window_info anchor="bottom" id="Message" order="2" />
       <window_info anchor="bottom" id="Find" order="3" weight="0.32857144" />
-      <window_info anchor="bottom" id="Run" order="4" weight="0.15918367" />
-      <window_info anchor="bottom" id="Debug" order="5" visible="true" weight="0.39795917" />
+      <window_info anchor="bottom" id="Run" order="4" visible="true" weight="0.15918367" />
+      <window_info anchor="bottom" id="Debug" order="5" weight="0.39795917" />
       <window_info anchor="bottom" id="Cvs" order="6" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="7" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="8" />
@@ -792,7 +781,7 @@
     <entry file="file://$PROJECT_DIR$/src/WorldModel.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="128">
-          <caret line="192" lean-forward="true" selection-start-line="192" selection-end-line="192" />
+          <caret line="192" selection-start-line="192" selection-end-line="192" />
           <folding>
             <element signature="e#2871#2872#0" expanded="true" />
             <element signature="e#2919#2920#0" expanded="true" />
@@ -838,31 +827,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/VirtualWorld.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="354">
-          <caret line="148" column="32" lean-forward="true" selection-start-line="148" selection-start-column="32" selection-end-line="148" selection-end-column="32" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Entities/BadGuy.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="172">
-          <caret line="35" column="73" selection-start-line="35" selection-start-column="73" selection-end-line="35" selection-end-column="73" />
+        <state relative-caret-position="375">
+          <caret line="25" column="1" lean-forward="true" selection-start-line="25" selection-start-column="1" selection-end-line="25" selection-end-column="1" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1559679254714" expanded="true" signature="130:770" ph="..." />
+            <marker date="1559680205004" expanded="true" signature="130:744" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Entities/Morty.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="404">
-          <caret line="38" lean-forward="true" selection-start-line="38" selection-end-line="38" />
+        <state relative-caret-position="420">
+          <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/VirtualWorld.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="279">
+          <caret line="143" column="46" selection-start-line="143" selection-start-column="46" selection-end-line="143" selection-end-column="46" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
