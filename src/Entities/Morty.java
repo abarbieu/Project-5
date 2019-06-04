@@ -14,7 +14,7 @@ public class Morty extends ActimatedEntity {
     private static final String QUAKE_KEY = "quake";
 
     public Morty(String id, Point position, List<PImage> images, int actionPeriod, int animationPeriod, PathingStrategy p) {
-        super(id, position, animationPeriod, images, 0, actionPeriod, p);
+        super(id, position, animationPeriod, images, 0, 5, p);
     }
 
     public void executeActivity(WorldModel world,
@@ -23,13 +23,14 @@ public class Morty extends ActimatedEntity {
 
         Optional<Entity> target = super.getPosition().findNearest(world, Rick.class);
 
-        long nextPeriod = super.getActionPeriod();
-
         if (target.isPresent()) {
             this.moveToRick(world, target.get(), scheduler);
         }
 
-        scheduler.scheduleEvent(this, new Activity(this, world, imageStore), nextPeriod);
+        long nextPeriod = super.getActionPeriod();
+        scheduler.scheduleEvent(this,
+                new Activity(this, world, imageStore),
+                nextPeriod);
     }
 
     private void moveToRick(WorldModel world, Entity target, EventScheduler scheduler)
@@ -37,4 +38,3 @@ public class Morty extends ActimatedEntity {
         super.moveNextPos(world, target, scheduler);
     }
 }
-

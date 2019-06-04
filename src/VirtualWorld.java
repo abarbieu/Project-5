@@ -145,8 +145,14 @@ public final class VirtualWorld
 
         }
 
-        Entity entity = new BadGuy("badGuy", pos, imageStore.getImageList("badGuy"), 5, 0, new AStarPathingStrategy());
+        Entity entity = new BadGuy("badGuy", pos, imageStore.getImageList("badGuy"), 1, 0, new AStarPathingStrategy());
         world.addEntity(entity);
+
+        Entity morty = new Morty("morty", pos, imageStore.getImageList("morty"), 1, 0, new AStarPathingStrategy());
+        world.addEntity(morty);
+
+
+        scheduleActions(world, scheduler, imageStore);
     }
 
 
