@@ -145,7 +145,7 @@ public final class VirtualWorld
 
         }
 
-        Obstacle tree = new Obstacle("tree", pos, imageStore.getImageList("rocks"));
+        Obstacle tree = new Obstacle("badGuy", pos, imageStore.getImageList("badGuy"));
         world.addEntity(tree);
     }
 
