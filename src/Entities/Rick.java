@@ -17,7 +17,7 @@ public class Rick extends ActimatedEntity {
     public void executeActivity(WorldModel world, ImageStore imageStore, EventScheduler scheduler) {
         if (resourceCount >= resourceLimit) {
             Optional<Entity> fullTarget = super.getPosition().findNearest(world,
-                    PickleRick.class);
+                    Tree.class);
 
             if (fullTarget.isPresent() &&
                     this.moveToFull(world, fullTarget.get(), scheduler)) {
@@ -57,6 +57,7 @@ public class Rick extends ActimatedEntity {
     private boolean moveToFull(WorldModel world,
                                Entity target, EventScheduler scheduler) {
         if (super.getPosition().adjacent(target.getPosition())) {
+
             return true;
         } else {
             return moveNextPos(world, target, scheduler);

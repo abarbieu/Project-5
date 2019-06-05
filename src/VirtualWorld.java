@@ -113,14 +113,14 @@ public final class VirtualWorld
                 return;
 
             for (Point neighbor : neighbors) {
-                Background tree = new Background("tree", imageStore.getImageList("rocks"));
+                Background tree = new Background("tree", imageStore.getImageList("tree"));
                 if (neighbor.withinBounds(this.world)) {
                     world.setBackgroundCell(neighbor, tree);
                 }
 
             }
-            Background tree = new Background("tree", imageStore.getImageList("rocks"));
-            world.setBackgroundCell(pos, tree);
+            Entity tree = new Tree("tree", imageStore.getImageList("tree"),pos);
+            world.addEntity(tree);
 
 //        Entity entity = new BadGuy("badGuy", pos, imageStore.getImageList("badGuy"), 1, 0, new AStarPathingStrategy());
 //        world.addEntity(entity);

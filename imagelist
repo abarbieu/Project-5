@@ -25,7 +25,7 @@ quake images/quake3.bmp 255 255 255 0
 quake images/quake4.bmp 255 255 255 0
 quake images/quake5.bmp 255 255 255 0
 quake images/quake6.bmp 255 255 255 0
-rocks newImages/tree.bmp
+tree newImages/tree.bmp
 vein newImages/powerPlant.bmp
 background_default images/none.bmp
 badGuy newImages/badGuy.bmp 252 252 252 0
