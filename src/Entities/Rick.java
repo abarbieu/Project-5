@@ -1,5 +1,6 @@
 import processing.core.PImage;
 
+import java.awt.*;
 import java.util.List;
 import java.util.Optional;
 
@@ -9,7 +10,7 @@ public class Rick extends ActimatedEntity {
 
 
     public Rick(String id, Point position, List<PImage> images, int resourceLimit, int resourceCount, int actionPeriod, int animationPeriod, PathingStrategy p) {
-        super(id, position, animationPeriod, images, 0, actionPeriod,p);
+        super(id, position, animationPeriod, images, 0, actionPeriod, p);
         this.resourceLimit = resourceLimit;
         this.resourceCount = resourceCount;
     }
@@ -18,10 +19,22 @@ public class Rick extends ActimatedEntity {
         if (resourceCount >= resourceLimit) {
             Optional<Entity> fullTarget = super.getPosition().findNearest(world,
                     Tree.class);
-
+            Point tmpPos = null;
+            if(fullTarget.isPresent()){
+                tmpPos = fullTarget.get().getPosition();
+            }
             if (fullTarget.isPresent() &&
-                    this.moveToFull(world, fullTarget.get(), scheduler)) {
+                    this.moveToFull(world, fullTarget.get(), scheduler, imageStore)) {
+
+
+                ActiveEntity newVein = new Vein("newVein",
+                        tmpPos,
+                        10000,
+                        imageStore.getImageList("vein"));
+                world.addEntity(newVein);
+                newVein.scheduleAction(scheduler, world, imageStore);
                 this.transformFull(world, scheduler, imageStore);
+
             } else {
                 scheduler.scheduleEvent(this,
                         new Activity(this, world, imageStore),
@@ -55,8 +68,18 @@ public class Rick extends ActimatedEntity {
     }
 
     private boolean moveToFull(WorldModel world,
-                               Entity target, EventScheduler scheduler) {
+                               Entity target, EventScheduler scheduler, ImageStore imageStore) {
         if (super.getPosition().adjacent(target.getPosition())) {
+            world.removeEntity(target);
+            scheduler.unscheduleAllEvents(target);
+
+
+            Point tmpPos = target.getPosition();
+            ActimatedEntity quake = new Quake(tmpPos,
+                    imageStore.getImageList("quake"));
+            world.addEntity(quake);
+            quake.scheduleAction(scheduler, world, imageStore);
+
 
             return true;
         } else {
@@ -69,7 +92,7 @@ public class Rick extends ActimatedEntity {
         if (this.resourceCount >= this.resourceLimit) {
             ActimatedEntity miner = new Rick(super.getId(), super.getPosition(),
                     super.getImages(), this.resourceLimit, this.resourceLimit,
-                    super.getActionPeriod(), super.getAnimationPeriod(),super.getStrat());
+                    super.getActionPeriod(), super.getAnimationPeriod(), super.getStrat());
 
             replaceMe(world, scheduler, imageStore, miner);
 
@@ -82,7 +105,7 @@ public class Rick extends ActimatedEntity {
     private void transformFull(WorldModel world,
                                EventScheduler scheduler, ImageStore imageStore) {
         ActimatedEntity miner = new Rick(super.getId(), super.getPosition(), super.getImages(), this.resourceLimit, 0,
-                super.getActionPeriod(), super.getAnimationPeriod(),super.getStrat());
+                super.getActionPeriod(), super.getAnimationPeriod(), super.getStrat());
 
         replaceMe(world, scheduler, imageStore, miner);
     }

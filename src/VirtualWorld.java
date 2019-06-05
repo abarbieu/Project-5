@@ -101,35 +101,36 @@ public final class VirtualWorld
     }
 
     public void worldEvent(Point pos) {
-        println(pos);
-        if (pos.withinBounds(this.world)) {
 
-            Predicate<Point> canPassThrough = (pt) -> !pos.isOccupied(world);
+        if (pos.withinBounds(this.world)) {
+            Predicate<Point> canSpawnIn = (pt) -> pt.withinBounds(world) && !pt.isOccupied(world) && !(world.getOccupancyCell(pt) instanceof Tree);
             List<Point> neighbors = PathingStrategy.DIAGONAL_CARDINAL_NEIGHBORS.apply(pos)
-                    .filter(canPassThrough).collect(Collectors.toList());
+                    .filter(canSpawnIn).collect(Collectors.toList());
 
 
             if (neighbors.size() < 8)
                 return;
 
             for (Point neighbor : neighbors) {
-                Background tree = new Background("tree", imageStore.getImageList("tree"));
                 if (neighbor.withinBounds(this.world)) {
-                    world.setBackgroundCell(neighbor, tree);
+                    Entity tree1 = new Tree("tree", imageStore.getImageList("tree"), neighbor);
+                    world.addEntity(tree1);
                 }
-
             }
-            Entity tree = new Tree("tree", imageStore.getImageList("tree"),pos);
-            world.addEntity(tree);
 
 //        Entity entity = new BadGuy("badGuy", pos, imageStore.getImageList("badGuy"), 1, 0, new AStarPathingStrategy());
 //        world.addEntity(entity);
 
-            Entity morty = new Morty("morty", pos, imageStore.getImageList("morty"), 1, 0, new AStarPathingStrategy());
+            ActimatedEntity morty = new Morty("morty", pos, imageStore.getImageList("morty"), 1, 0, new AStarPathingStrategy());
             world.addEntity(morty);
+            morty.scheduleAction(scheduler,world,imageStore);
 
-
-            scheduleActions(world, scheduler, imageStore);
+            for(Entity p : world.getEntities().stream()
+                    .filter(e -> e instanceof PickleRick)
+                    .collect(Collectors.toList())){
+                ((PickleRick)p).activate();
+                ((PickleRick)p).scheduleAction(scheduler,world,imageStore);
+            }
         }
     }
 

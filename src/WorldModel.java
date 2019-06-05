@@ -133,9 +133,8 @@ final class WorldModel {
        */
     public void addEntity(Entity entity) {
         if (entity.getPosition().withinBounds(this)) {
-            if (!(entity instanceof Tree)) {
-                this.setOccupancyCell(entity.getPosition(), entity);
-            }
+            this.setOccupancyCell(entity.getPosition(), entity);
+
             this.entities.add(entity);
         }
     }
@@ -235,6 +234,21 @@ final class WorldModel {
 
         return properties.length == MINER_NUM_PROPERTIES;
     }
+    public boolean parseMorty(String[] properties,
+                              ImageStore imageStore) {
+        if (properties.length == MINER_NUM_PROPERTIES) {
+            Point pt = new Point(Integer.parseInt(properties[MINER_COL]),
+                    Integer.parseInt(properties[MINER_ROW]));
+            Entity entity = new Morty(properties[MINER_ID], pt,
+                    imageStore.getImageList("morty"),
+                    Integer.parseInt(properties[MINER_ACTION_PERIOD]),
+                    Integer.parseInt(properties[MINER_ANIMATION_PERIOD]),
+                    new AStarPathingStrategy());
+            this.tryAddEntity(entity);
+        }
+
+        return properties.length == MINER_NUM_PROPERTIES;
+    }
 
     public boolean parseBackground(String[] properties,
                                    ImageStore imageStore) {
@@ -260,6 +274,8 @@ final class WorldModel {
                     return this.parseMiner(properties, imageStore);
                 case OBSTACLE_KEY:
                     return this.parseObstacle(properties, imageStore);
+                case "morty":
+                    return this.parseMorty(properties,imageStore);
                 case "tree":
                     return this.parseTree(properties, imageStore);
                 case ORE_KEY:

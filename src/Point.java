@@ -61,6 +61,9 @@ final class Point
 
     public boolean isOccupied(WorldModel world)
     {
+        if(world.getOccupancyCell(this)instanceof Tree){
+            return false;
+        }
        return withinBounds(world) &&
           world.getOccupancyCell(this) != null;
     }
@@ -107,7 +110,7 @@ final class Point
           {
              Point newPt = new Point(x + dx, y + dy);
              if (newPt.withinBounds(worldModel) &&
-                     !newPt.isOccupied(worldModel))
+                     (!newPt.isOccupied(worldModel) && !(worldModel.getOccupancyCell(newPt) instanceof Tree)))
              {
                 return Optional.of(newPt);
              }
