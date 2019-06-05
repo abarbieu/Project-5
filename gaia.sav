@@ -1,3 +1,4 @@
+morty morty_21_1 21 1 0 1 1
 miner miner_6_3 6 3 2 813 100
 miner miner_5_6 5 6 2 992 100
 vein vein_7_11 7 11 9377
@@ -81,7 +82,7 @@ background grass 15 0
 background grass 16 0
 background grass 17 0
 background grass 18 0
-background rocks 19 0
+background grass 19 0
 background grass 19 14
 background grass 20 0
 background grass 21 0
@@ -123,7 +124,8 @@ background grass 16 1
 background grass 17 1
 background grass 18 1
 background grass 19 1
-background rocks 20 1
+tree tree 20 1
+background grass 20 1
 background grass 21 1
 background grass 22 1
 background grass 23 1
@@ -603,7 +605,8 @@ background grass 16 13
 background grass 17 13
 background grass 18 13
 background grass 19 13
-background rocks 20 13
+tree tree 20 13
+background grass 20 13
 background grass 21 13
 background grass 22 13
 background grass 23 13
@@ -622,7 +625,8 @@ background grass 35 13
 background grass 36 13
 background grass 37 13
 background grass 38 13
-background rocks 39 13
+tree tree 39 13
+background grass 39 13
 background grass 0 14
 background grass 1 14
 background grass 2 14
@@ -682,7 +686,8 @@ background grass 16 15
 background grass 17 15
 background grass 18 15
 background grass 19 15
-background rocks 20 15
+tree tree 20 15
+background grass 20 15
 background grass 21 15
 background grass 22 15
 background grass 23 15
@@ -701,7 +706,8 @@ background grass 35 15
 background grass 36 15
 background grass 37 15
 background grass 38 15
-background rocks 39 15
+tree tree 39 15
+background grass 39 15
 background grass 0 16
 background grass 1 16
 background grass 2 16
@@ -721,7 +727,8 @@ background grass 15 16
 background grass 16 16
 background grass 17 16
 background grass 18 16
-background rocks 19 16
+tree tree 19 16
+background grass 19 16
 background grass 20 16
 background grass 21 16
 background grass 22 16
@@ -1201,7 +1208,8 @@ background grass 15 28
 background grass 16 28
 background grass 17 28
 background grass 18 28
-background rocks 19 28
+tree tree 19 28
+background grass 19 28
 background grass 20 28
 background grass 21 28
 background grass 22 28
@@ -1242,7 +1250,8 @@ background grass 16 29
 background grass 17 29
 background grass 18 29
 background grass 19 29
-background rocks 20 29
+tree tree 20 29
+background grass 20 29
 background grass 21 29
 background grass 22 29
 background grass 23 29

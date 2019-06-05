@@ -20,11 +20,17 @@ public class Morty extends ActimatedEntity {
     public void executeActivity(WorldModel world,
                                 ImageStore imageStore, EventScheduler scheduler) {
 
+        Optional<Entity> pickleDeath = getPosition().findNearest(world,PickleRick.class);
+        if(pickleDeath.isPresent() && getPosition().adjacent(pickleDeath.get().getPosition())){
+            world.removeEntity(this);
+            scheduler.unscheduleAllEvents(this);
+            return;
+        }
 
         Optional<Entity> target = super.getPosition().findNearest(world, OreBlob.class);
 
         if (target.isPresent()) {
-            this.moveToRick(world, target.get(), scheduler);
+            this.moveToMorty(world, target.get(), scheduler);
         }
 
         long nextPeriod = super.getActionPeriod();
@@ -33,14 +39,13 @@ public class Morty extends ActimatedEntity {
                 nextPeriod);
     }
 
-    private boolean moveToRick(WorldModel world, Entity target, EventScheduler scheduler)
+    private boolean moveToMorty(WorldModel world, Entity target, EventScheduler scheduler)
     {
         if (super.getPosition().adjacent(target.getPosition())) {
             world.removeEntity(target);
             scheduler.unscheduleAllEvents(target);
             return true;
         } else {
-
             return super.moveNextPos(world, target, scheduler);
         }
     }
