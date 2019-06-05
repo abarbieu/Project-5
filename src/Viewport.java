@@ -32,6 +32,10 @@ final class Viewport
        this.col = col;
        this.row = row;
     }
+    public void reset(){
+       this.col=0;
+       this.row=0;
+    }
 
     public int getCol() {
         return col;

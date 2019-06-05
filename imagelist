@@ -1,10 +1,10 @@
 blacksmith newImages/pickleRick.bmp
 blob images/blob1.bmp 255 255 255 0
 blob images/blob2.bmp 255 255 255 0
-blob nimages/blob3.bmp 255 255 255 0
+blob images/blob3.bmp 255 255 255 0
 blob images/blob4.bmp 255 255 255 0
 blob images/blob5.bmp 255 255 255 0
-blob nimages/blob6.bmp 255 255 255 0
+blob images/blob6.bmp 255 255 255 0
 blob images/blob7.bmp 255 255 255 0
 blob images/blob8.bmp 255 255 255 0
 blob images/blob8.bmp 255 255 255 0

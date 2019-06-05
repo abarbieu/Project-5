@@ -4,7 +4,9 @@ import java.util.Scanner;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
 import java.util.List;
+
 import processing.core.*;
+import processing.event.MouseEvent;
 
 public final class VirtualWorld
         extends PApplet {
@@ -54,6 +56,7 @@ public final class VirtualWorld
     private static final int MINER_COL = 2;
     private static final int MINER_ID = 1;
     private static final String MINER_KEY = "miner";
+
     public void settings() {
         size(VIEW_WIDTH, VIEW_HEIGHT);
     }
@@ -88,6 +91,48 @@ public final class VirtualWorld
         view.drawViewport();
     }
 
+    public void mousePressed() {
+        worldEvent(mouseToWorld());
+    }
+
+    public Point mouseToWorld() {
+        return new Point(this.view.getViewport().getCol() + mouseX / (int) view.getTileWidth(),
+                this.view.getViewport().getRow() + mouseY / (int) view.getTileHeight());
+    }
+
+    public void worldEvent(Point pos) {
+        println(pos);
+        if (pos.withinBounds(this.world)) {
+
+            Predicate<Point> canPassThrough = (pt) -> !pos.isOccupied(world);
+            List<Point> neighbors = PathingStrategy.DIAGONAL_CARDINAL_NEIGHBORS.apply(pos)
+                    .filter(canPassThrough).collect(Collectors.toList());
+
+
+            if (neighbors.size() < 8)
+                return;
+
+            for (Point neighbor : neighbors) {
+                Background tree = new Background("tree", imageStore.getImageList("rocks"));
+                if (neighbor.withinBounds(this.world)) {
+                    world.setBackgroundCell(neighbor, tree);
+                }
+
+            }
+            Background tree = new Background("tree", imageStore.getImageList("rocks"));
+            world.setBackgroundCell(pos, tree);
+
+//        Entity entity = new BadGuy("badGuy", pos, imageStore.getImageList("badGuy"), 1, 0, new AStarPathingStrategy());
+//        world.addEntity(entity);
+
+            Entity morty = new Morty("morty", pos, imageStore.getImageList("morty"), 1, 0, new AStarPathingStrategy());
+            world.addEntity(morty);
+
+
+            scheduleActions(world, scheduler, imageStore);
+        }
+    }
+
     public void keyPressed() {
         if (key == CODED) {
             int dx = 0;
@@ -108,55 +153,26 @@ public final class VirtualWorld
                     break;
             }
             view.shiftView(dx, dy);
-        } /*else {
+        } else {
             switch (key) {
-                case ('+'):
-                    view.zoom((float) 1.125);
-                    break;
-                case ('_'):
-                    view.zoom((float) 0.875);
+                case ('r'):
+                    view.reset();
                     break;
                 default:
                     break;
             }
-        }*/
-
-    }
-
-    public void mousePressed(){
-        worldEvent(new Point(mouseX/TILE_WIDTH ,mouseY/TILE_HEIGHT));
-    }
-
-    public void worldEvent(Point pos){
-
-        System.out.println(pos);
-        Predicate<Point> canPassThrough = (pt) -> !pos.isOccupied(world);
-        List<Point> neighbors = PathingStrategy.DIAGONAL_CARDINAL_NEIGHBORS.apply(pos)
-                .filter(canPassThrough).collect(Collectors.toList());
-
-        System.out.println(neighbors.size());
-        if (neighbors.size() < 8)
-            return;
-
-        for (Point neighbor:neighbors)
-        {
-            Background tree = new Background("tree", imageStore.getImageList("rocks"));
-            world.setBackgroundCell(neighbor, tree);
-
         }
-        Background tree = new Background("tree", imageStore.getImageList("rocks"));
-        world.setBackgroundCell(pos, tree);
 
-//        Entity entity = new BadGuy("badGuy", pos, imageStore.getImageList("badGuy"), 1, 0, new AStarPathingStrategy());
-//        world.addEntity(entity);
-
-        Entity morty = new Morty("morty", pos, imageStore.getImageList("morty"), 1, 0, new AStarPathingStrategy());
-        world.addEntity(morty);
-
-
-        scheduleActions(world, scheduler, imageStore);
     }
 
+    @Override
+    public void mouseWheel(MouseEvent event) {
+        if (event.getCount() != 0) {
+            view.zoom((float) (1.0 + (event.getCount() * 0.1)),
+                    this.view.getViewport().worldToViewport(mouseX / (int) view.getTileWidth(),
+                            mouseY / (int) view.getTileHeight()));
+        }
+    }
 
     public static Background createDefaultBackground(ImageStore imageStore) {
         return new Background(DEFAULT_IMAGE_NAME,
