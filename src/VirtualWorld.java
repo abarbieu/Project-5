@@ -72,6 +72,9 @@ public final class VirtualWorld
         this.view = new WorldView(VIEW_ROWS, VIEW_COLS, this, world,
                 TILE_WIDTH, TILE_HEIGHT);
         this.scheduler = new EventScheduler(timeScale);
+        TreeBuilder tB = new TreeBuilder("treeBuilder", 100);
+        world.addEntity(tB);
+        tB.scheduleAction(scheduler, world, imageStore);
 
         loadImages(IMAGE_LIST_FILE_NAME, imageStore, this);
         loadWorld(world, LOAD_FILE_NAME, imageStore);
@@ -123,13 +126,13 @@ public final class VirtualWorld
 
             ActimatedEntity morty = new Morty("morty", pos, imageStore.getImageList("morty"), 1, 0, new AStarPathingStrategy());
             world.addEntity(morty);
-            morty.scheduleAction(scheduler,world,imageStore);
+            morty.scheduleAction(scheduler, world, imageStore);
 
-            for(Entity p : world.getEntities().stream()
+            for (Entity p : world.getEntities().stream()
                     .filter(e -> e instanceof PickleRick)
-                    .collect(Collectors.toList())){
-                ((PickleRick)p).activate();
-                ((PickleRick)p).scheduleAction(scheduler,world,imageStore);
+                    .collect(Collectors.toList())) {
+                ((PickleRick) p).activate();
+                ((PickleRick) p).scheduleAction(scheduler, world, imageStore);
             }
         }
     }

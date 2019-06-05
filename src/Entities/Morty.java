@@ -4,14 +4,6 @@ import java.util.List;
 import java.util.Optional;
 
 public class Morty extends ActimatedEntity {
-    private String id;
-    private Point position;
-    private List<PImage> images;
-    private int imageIndex;
-    private int actionPeriod;
-    private int animationPeriod;
-    private PathingStrategy pathStrat;
-    private static final String QUAKE_KEY = "quake";
 
     public Morty(String id, Point position, List<PImage> images, int actionPeriod, int animationPeriod, PathingStrategy p) {
         super(id, position, animationPeriod, images, 0, 5, p);
@@ -24,6 +16,17 @@ public class Morty extends ActimatedEntity {
         if(pickleDeath.isPresent() && getPosition().adjacent(pickleDeath.get().getPosition())){
             world.removeEntity(this);
             scheduler.unscheduleAllEvents(this);
+
+            Point newPoint = new Point((int)( Math.random() * world.getNumRows()), (int)( Math.random() * world.getNumCols()));
+            while (!checkIfValid(newPoint, world)) {
+                newPoint = new Point((int)( Math.random() * world.getNumRows()), (int)( Math.random() * world.getNumCols()));
+            }
+            Morty teleMorty = new Morty("newMorty", newPoint,imageStore.getImageList("morty"),
+                    1,0,new AStarPathingStrategy());
+            world.addEntity(teleMorty);
+            teleMorty.scheduleAction(scheduler,world,imageStore);
+
+
             return;
         }
 
@@ -37,6 +40,9 @@ public class Morty extends ActimatedEntity {
         scheduler.scheduleEvent(this,
                 new Activity(this, world, imageStore),
                 nextPeriod);
+    }
+    private boolean checkIfValid(Point p, WorldModel world) {
+        return p.withinBounds(world) && !p.isOccupied(world) && !(world.getOccupancyCell(p) instanceof Tree);
     }
 
     private boolean moveToMorty(WorldModel world, Entity target, EventScheduler scheduler)
