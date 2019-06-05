@@ -18,7 +18,7 @@ public class Vein extends ActiveEntity {
     private static final String ORE_KEY = "ore";
 
     public Vein(String id, Point position, int actionPeriod,List<PImage> images) {
-        super(id,position,images, actionPeriod);
+        super(id,position,images, actionPeriod*4);
     }
 
     public void executeActivity(WorldModel world,

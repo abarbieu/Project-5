@@ -17,9 +17,9 @@ public class Morty extends ActimatedEntity {
             world.removeEntity(this);
             scheduler.unscheduleAllEvents(this);
 
-            Point newPoint = new Point((int)( Math.random() * world.getNumRows()), (int)( Math.random() * world.getNumCols()));
+            Point newPoint = new Point((int)( Math.random() * world.getNumCols()), (int)( Math.random() * world.getNumRows()));
             while (!checkIfValid(newPoint, world)) {
-                newPoint = new Point((int)( Math.random() * world.getNumRows()), (int)( Math.random() * world.getNumCols()));
+                newPoint = new Point((int)( Math.random() * world.getNumCols()), (int)( Math.random() * world.getNumRows()));
             }
             Morty teleMorty = new Morty("newMorty", newPoint,imageStore.getImageList("morty"),
                     1,0,new AStarPathingStrategy());

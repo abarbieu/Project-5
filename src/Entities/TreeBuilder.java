@@ -17,9 +17,9 @@ public class TreeBuilder extends Entity implements Active {
 
     @Override
     public void executeActivity(WorldModel world, ImageStore imageStore, EventScheduler scheduler) {
-        Point newPoint = new Point((int)( Math.random() * world.getNumRows()), (int)( Math.random() * world.getNumCols()));
+        Point newPoint = new Point((int)( Math.random() * world.getNumCols()), (int)( Math.random() * world.getNumRows()));
         while (!checkIfValid(newPoint, world)) {
-            newPoint = new Point((int)( Math.random() * world.getNumRows()), (int)( Math.random() * world.getNumCols()));
+            newPoint = new Point((int)( Math.random() * world.getNumCols()), (int)( Math.random() * world.getNumRows()));
         }
         Tree tree = new Tree("newTree", imageStore.getImageList("tree"),
                 newPoint);

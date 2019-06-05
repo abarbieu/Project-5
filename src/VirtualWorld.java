@@ -49,13 +49,6 @@ public final class VirtualWorld
 
     private long next_time;
 
-    private static final int MINER_ANIMATION_PERIOD = 6;
-    private static final int MINER_ACTION_PERIOD = 5;
-    private static final int MINER_LIMIT = 4;
-    private static final int MINER_ROW = 3;
-    private static final int MINER_COL = 2;
-    private static final int MINER_ID = 1;
-    private static final String MINER_KEY = "miner";
 
     public void settings() {
         size(VIEW_WIDTH, VIEW_HEIGHT);
@@ -67,12 +60,12 @@ public final class VirtualWorld
     public void setup() {
         this.imageStore = new ImageStore(
                 createImageColored(TILE_WIDTH, TILE_HEIGHT, DEFAULT_IMAGE_COLOR));
-        this.world = new WorldModel(WORLD_ROWS, WORLD_COLS,
+        this.world = new WorldModel(WORLD_ROWS / WORLD_HEIGHT_SCALE, WORLD_COLS / WORLD_WIDTH_SCALE,
                 createDefaultBackground(imageStore));
         this.view = new WorldView(VIEW_ROWS, VIEW_COLS, this, world,
                 TILE_WIDTH, TILE_HEIGHT);
         this.scheduler = new EventScheduler(timeScale);
-        TreeBuilder tB = new TreeBuilder("treeBuilder", 100);
+        TreeBuilder tB = new TreeBuilder("treeBuilder", 5000);
         world.addEntity(tB);
         tB.scheduleAction(scheduler, world, imageStore);
 
@@ -85,6 +78,7 @@ public final class VirtualWorld
     }
 
     public void draw() {
+        background(0);
         long time = System.currentTimeMillis();
         if (time >= next_time) {
             this.scheduler.updateOnTime(time);
