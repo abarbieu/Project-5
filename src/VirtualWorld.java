@@ -48,6 +48,7 @@ public final class VirtualWorld
     private EventScheduler scheduler;
 
     private long next_time;
+    private boolean enterGame=false,entered=false;
 
     public void settings() {
         size(VIEW_WIDTH, VIEW_HEIGHT);
@@ -64,20 +65,18 @@ public final class VirtualWorld
         this.view = new WorldView(VIEW_ROWS, VIEW_COLS, this, world,
                 TILE_WIDTH, TILE_HEIGHT);
         this.scheduler = new EventScheduler(timeScale);
+        loadImages(IMAGE_LIST_FILE_NAME, imageStore, this);
+        loadWorld(world, LOAD_FILE_NAME, imageStore);
+
 //        TreeBuilder tB = new TreeBuilder("treeBuilder", 5000);
 //        world.addEntity(tB);
 //        tB.scheduleAction(scheduler, world, imageStore);
 
-        loadImages(IMAGE_LIST_FILE_NAME, imageStore, this);
-        loadWorld(world, LOAD_FILE_NAME, imageStore);
 
-        scheduleActions(world, scheduler, imageStore);
-
-        next_time = System.currentTimeMillis() + TIMER_ACTION_PERIOD;
-        println(world.getNumCols(),world.getNumRows());
     }
 
     public void draw() {
+
         background(0);
         long time = System.currentTimeMillis();
         if (time >= next_time) {
@@ -91,6 +90,19 @@ public final class VirtualWorld
             fill(255);
             textAlign(CENTER);
             text("YOU WON",width/2,height/2);
+        }
+        if(enterGame && !entered){
+            scheduleActions(world, scheduler, imageStore);
+            next_time = System.currentTimeMillis() + TIMER_ACTION_PERIOD;
+            entered=true;
+        }else if(!entered){
+            textSize(50);
+            fill(255);
+            textAlign(CENTER);
+            text("PRESS ANY KEY TO START",width/2,height/2);
+            if(keyPressed){
+                enterGame=true;
+            }
         }
     }
 
