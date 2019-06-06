@@ -97,8 +97,8 @@ public final class VirtualWorld
             text("YOU LOOSE",width/2,height/2);
             for(Entity e :world.getEntities()){
                 if(e instanceof Rick){
-
                     ((Rick)e).lose();
+                    view.reset();
                 }
             }
         }
