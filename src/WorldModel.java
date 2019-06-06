@@ -218,6 +218,19 @@ final class WorldModel {
         return properties.length == OBSTACLE_NUM_PROPERTIES;
     }
 
+    public boolean parseBadGuy(String[] properties,
+                             ImageStore imageStore) {
+        if (properties.length == OBSTACLE_NUM_PROPERTIES) {
+            Point pt = new Point(
+                    Integer.parseInt(properties[OBSTACLE_COL]),
+                    Integer.parseInt(properties[OBSTACLE_ROW]));
+            Entity entity = new Tree(properties[OBSTACLE_ID],
+                    imageStore.getImageList("badGuy"), pt);
+            this.tryAddEntity(entity);
+        }
+        return properties.length == OBSTACLE_NUM_PROPERTIES;
+    }
+
     public boolean parseMiner(String[] properties,
                               ImageStore imageStore) {
         if (properties.length == MINER_NUM_PROPERTIES) {
@@ -278,12 +291,15 @@ final class WorldModel {
                     return this.parseMorty(properties,imageStore);
                 case "tree":
                     return this.parseTree(properties, imageStore);
+
                 case ORE_KEY:
                     return this.parseOre(properties, imageStore);
                 case SMITH_KEY:
                     return this.parseSmith(properties, imageStore);
                 case VEIN_KEY:
                     return this.parseVein(properties, imageStore);
+                case "badGuy":
+                    return this.parseBadGuy(properties, imageStore);
             }
         }
 
