@@ -30,7 +30,7 @@ public class Alien extends ActimatedEntity
         if (blobTarget.isPresent()) {
             Point tgtPos = blobTarget.get().getPosition();
 
-            if (this.moveToOreBlob(world, blobTarget.get(), scheduler)) {
+            if (this.moveToMorty(world, blobTarget.get(), scheduler)) {
                 ActimatedEntity quake = new Quake(tgtPos,
                         imageStore.getImageList(QUAKE_KEY));
 
@@ -45,7 +45,7 @@ public class Alien extends ActimatedEntity
                 nextPeriod);
     }
 
-    private boolean moveToOreBlob(WorldModel world,
+    private boolean moveToMorty(WorldModel world,
                                   Entity target, EventScheduler scheduler) {
         if (super.getPosition().adjacent(target.getPosition())) {
             world.removeEntity(target);

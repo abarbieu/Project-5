@@ -237,7 +237,7 @@ final class WorldModel {
             Point pt = new Point(Integer.parseInt(properties[2]),
                     Integer.parseInt(properties[3]));
 
-            ActimatedEntity entity = new BadGuy("alien", pt, imageStore.getImageList("alien"), 2, 0, new SingleStepPath());
+            ActimatedEntity entity = new Alien("alien", pt, imageStore.getImageList("alien"), Integer.parseInt(properties[4]), 0, new SingleStepPath());
             this.tryAddEntity(entity);
         }
 

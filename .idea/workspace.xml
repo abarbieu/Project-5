@@ -6,7 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="6869d8e7-09fa-4831-8fa7-74e890b7e924" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/gaia.sav" beforeDir="false" afterPath="$PROJECT_DIR$/gaia.sav" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imagelist" beforeDir="false" afterPath="$PROJECT_DIR$/imagelist" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entities/Alien.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entities/Alien.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/WorldModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/WorldModel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/output/production/Project2/WorldModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/output/production/Project2/WorldModel.class" afterDir="false" />
     </list>
@@ -86,11 +86,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/WorldModel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="393">
-              <caret line="239" column="96" selection-start-line="239" selection-start-column="96" selection-end-line="239" selection-end-column="96" />
+            <state relative-caret-position="550">
+              <caret line="246" lean-forward="true" selection-start-line="246" selection-end-line="246" />
             </state>
           </provider>
         </entry>
@@ -98,8 +98,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Entities/Alien.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="244">
-              <caret line="33" column="57" lean-forward="true" selection-start-line="33" selection-start-column="57" selection-end-line="33" selection-end-column="57" />
+            <state relative-caret-position="645">
+              <caret line="43" column="44" lean-forward="true" selection-start-line="43" selection-start-column="44" selection-end-line="43" selection-end-column="44" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -107,11 +107,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/gaia.sav">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="570">
-              <caret line="38" column="22" lean-forward="true" selection-start-line="38" selection-start-column="22" selection-end-line="38" selection-end-column="22" />
+            <state relative-caret-position="535">
+              <caret line="38" column="22" selection-start-line="38" selection-start-column="22" selection-end-line="38" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -120,7 +120,7 @@
         <entry file="file://$PROJECT_DIR$/src/Entities/BadGuy.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="90">
-              <caret line="6" selection-start-line="6" selection-end-line="32" selection-end-column="5" />
+              <caret line="6" selection-start-line="6" selection-end-line="16" selection-end-column="68" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -131,8 +131,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Entities/Rick.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="477">
-              <caret line="46" column="24" selection-start-line="46" selection-start-column="24" selection-end-line="46" selection-end-column="24" />
+            <state relative-caret-position="1317">
+              <caret line="102" column="24" selection-start-line="102" selection-start-column="24" selection-end-line="102" selection-end-column="24" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -260,8 +260,8 @@
         <option value="$PROJECT_DIR$/src/Entities/Alien2.java" />
         <option value="$PROJECT_DIR$/imagelist" />
         <option value="$PROJECT_DIR$/src/Entities/Alien.java" />
-        <option value="$PROJECT_DIR$/gaia.sav" />
         <option value="$PROJECT_DIR$/src/WorldModel.java" />
+        <option value="$PROJECT_DIR$/gaia.sav" />
       </list>
     </option>
   </component>
@@ -395,13 +395,13 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="78170000" />
+    <option name="totallyTimeSpent" value="78652000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="53" y="23" width="1627" height="1027" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49926144" visible="true" weight="0.28264984" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49926144" visible="true" weight="0.28264984" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="UI Designer" order="3" />
@@ -412,8 +412,8 @@
       <window_info anchor="bottom" id="Inspection Results" order="1" weight="0.49080622" />
       <window_info anchor="bottom" id="Message" order="2" />
       <window_info anchor="bottom" id="Find" order="3" weight="0.32857144" />
-      <window_info anchor="bottom" id="Run" order="4" visible="true" weight="0.18930481" />
-      <window_info anchor="bottom" id="Debug" order="5" weight="0.3960396" />
+      <window_info active="true" anchor="bottom" id="Run" order="4" visible="true" weight="0.18930481" />
+      <window_info anchor="bottom" id="Debug" order="5" weight="0.3957219" />
       <window_info anchor="bottom" id="Cvs" order="6" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="7" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="8" />
@@ -515,6 +515,18 @@
     <MESSAGE value="badguy movement" />
     <MESSAGE value="badguy movement update" />
     <option name="LAST_COMMIT_MESSAGE" value="badguy movement update" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Entities/Alien.java</url>
+          <line>17</line>
+          <properties />
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/newImages/radiation.png" />
@@ -872,18 +884,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Entities/Rick.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="477">
-          <caret line="46" column="24" selection-start-line="46" selection-start-column="24" selection-end-line="46" selection-end-column="24" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Entities/Morty.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="63" lean-forward="true" selection-start-line="21" selection-start-column="63" selection-end-line="21" selection-end-column="63" />
+        <state relative-caret-position="1317">
+          <caret line="102" column="24" selection-start-line="102" selection-start-column="24" selection-end-line="102" selection-end-column="24" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -893,7 +895,7 @@
     <entry file="file://$PROJECT_DIR$/src/Entities/BadGuy.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
-          <caret line="6" selection-start-line="6" selection-end-line="32" selection-end-column="5" />
+          <caret line="6" selection-start-line="6" selection-end-line="16" selection-end-column="68" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -917,27 +919,37 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Entities/Alien.java">
+    <entry file="file://$PROJECT_DIR$/src/Entities/Morty.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="244">
-          <caret line="33" column="57" lean-forward="true" selection-start-line="33" selection-start-column="57" selection-end-line="33" selection-end-column="57" />
+        <state relative-caret-position="315">
+          <caret line="21" column="63" lean-forward="true" selection-start-line="21" selection-start-column="63" selection-end-line="21" selection-end-column="63" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gaia.sav">
+    <entry file="file://$PROJECT_DIR$/src/Entities/Alien.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="570">
-          <caret line="38" column="22" lean-forward="true" selection-start-line="38" selection-start-column="22" selection-end-line="38" selection-end-column="22" />
+        <state relative-caret-position="645">
+          <caret line="43" column="44" lean-forward="true" selection-start-line="43" selection-start-column="44" selection-end-line="43" selection-end-column="44" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/WorldModel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="393">
-          <caret line="239" column="96" selection-start-line="239" selection-start-column="96" selection-end-line="239" selection-end-column="96" />
+        <state relative-caret-position="550">
+          <caret line="246" lean-forward="true" selection-start-line="246" selection-end-line="246" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gaia.sav">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="535">
+          <caret line="38" column="22" selection-start-line="38" selection-start-column="22" selection-end-line="38" selection-end-column="22" />
         </state>
       </provider>
     </entry>
