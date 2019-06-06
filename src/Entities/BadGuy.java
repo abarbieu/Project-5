@@ -21,20 +21,15 @@ public class BadGuy extends ActimatedEntity {
                                 ImageStore imageStore, EventScheduler scheduler) {
 
 
-        Optional<Entity> rick = super.getPosition().findNearest(world, Morty.class);
+        Optional<Entity> rick = super.getPosition().findNearest(world, Rick.class);
 
         if (rick.isPresent())
-            this.moveToMorty(world, rick.get(), scheduler);
+            super.moveNextPos(world, rick.get(), scheduler);
 
         long nextPeriod = super.getActionPeriod();
         scheduler.scheduleEvent(this,
                 new Activity(this, world, imageStore),
                 nextPeriod);
-    }
-
-    private void moveToMorty(WorldModel world, Entity target, EventScheduler scheduler)
-    {
-        super.moveNextPos(world, target, scheduler);
     }
 
 

@@ -61,9 +61,6 @@ final class Point
 
     public boolean isOccupied(WorldModel world)
     {
-        if(world.getOccupancyCell(this)instanceof Tree){
-            return false;
-        }
        return withinBounds(world) &&
           world.getOccupancyCell(this) != null;
     }

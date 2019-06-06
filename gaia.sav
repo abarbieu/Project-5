@@ -30,7 +30,7 @@ obstacle obstacle_30_21 30 21
 obstacle obstacle_31_22 31 22
 obstacle obstacle_32_23 32 23
 background grass 0 0
-badGuy badGuy 0 0
+badGuy badGuy 22 17
 background grass 1 0
 background grass 2 0
 background grass 3 0
