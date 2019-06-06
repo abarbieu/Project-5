@@ -10,7 +10,7 @@ final class WorldView {
     private float tileHeight;
     private float saveTH, saveTW;
     private Viewport viewport;
-    private float scale = 1;
+    private float scale = 2;
 
     public WorldView(int numRows, int numCols, PApplet screen, WorldModel world,
                      int tileWidth, int tileHeight) {

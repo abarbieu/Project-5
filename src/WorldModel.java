@@ -47,7 +47,7 @@ final class WorldModel {
     private Entity occupancy[][];
     private Set<Entity> entities;
 
-    public boolean won=false;
+    public boolean won=false,loose=false;
 
     public WorldModel(int numRows, int numCols, Background defaultBackground) {
         this.numRows = numRows;
@@ -233,6 +233,20 @@ final class WorldModel {
         return properties.length == 5;
     }
 
+    public boolean parseAlien(String[] properties,
+                               ImageStore imageStore) {
+        if (properties.length == 5) {
+            Point pt = new Point(Integer.parseInt(properties[2]),
+                    Integer.parseInt(properties[3]));
+
+            ActimatedEntity entity = new Alien("alien", pt, imageStore.getImageList("alien"), Integer.parseInt(properties[4]), 0, new SingleStepPath());
+            this.tryAddEntity(entity);
+        }
+
+        return properties.length == 5;
+    }
+
+
     public boolean parseMiner(String[] properties,
                               ImageStore imageStore) {
         if (properties.length == MINER_NUM_PROPERTIES) {
@@ -256,9 +270,9 @@ final class WorldModel {
                     Integer.parseInt(properties[MINER_ROW]));
             Entity entity = new Morty(properties[MINER_ID], pt,
                     imageStore.getImageList("morty"),
-                    Integer.parseInt(properties[MINER_ACTION_PERIOD]),
+                    1800,
                     Integer.parseInt(properties[MINER_ANIMATION_PERIOD]),
-                    new AStarPathingStrategy());
+                    new SingleStepPath());
             this.tryAddEntity(entity);
         }
 
@@ -302,6 +316,8 @@ final class WorldModel {
                     return this.parseVein(properties, imageStore);
                 case "badGuy":
                     return this.parseBadGuy(properties, imageStore);
+                case "alien":
+                    return this.parseAlien(properties, imageStore);
             }
         }
 

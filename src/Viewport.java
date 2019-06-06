@@ -1,7 +1,7 @@
 final class Viewport
 {
-   private int row;
-   private int col;
+   private int row=7;
+   private int col=10;
    private int numRows;
    private int numCols;
 

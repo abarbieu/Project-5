@@ -10,7 +10,7 @@ public class Rick extends ActimatedEntity {
     private int resourceCount;
     private int dx,dy;
     private WorldView view;
-    private boolean moving = false;
+    private boolean moving = false,lost=false;
 
     public Rick(String id, Point position, List<PImage> images, int resourceLimit, int resourceCount, int actionPeriod, int animationPeriod, PathingStrategy p) {
         super(id, position, animationPeriod, images, 0, actionPeriod, p);
@@ -19,13 +19,19 @@ public class Rick extends ActimatedEntity {
     }
 
     public boolean moveDir(int dx, int dy, WorldModel world,WorldView view) {
-        Point newPoint = new Point(getPosition().x + dx, getPosition().y + dy);
-        if (checkValid(newPoint, world)) {
-            setPosition(newPoint);
-            view.shiftView(dx, dy);
-            return true;
+        if(!lost) {
+            Point newPoint = new Point(getPosition().x + dx, getPosition().y + dy);
+            if (checkValid(newPoint, world)) {
+                setPosition(newPoint);
+                view.shiftView(dx, dy);
+                return true;
+            }
+            return false;
         }
-        return false;
+        return true;
+    }
+    public void lose(){
+        lost=true;
     }
     public void setMove(int dx, int dy,WorldView view){
         this.moving = true;
@@ -44,6 +50,9 @@ public class Rick extends ActimatedEntity {
 
         Optional<Entity> blobTarget = super.getPosition().findNearest(world,
                 BadGuy.class);
+        Optional<Entity> alien = super.getPosition().findNearest(world,
+                Alien.class);
+
 
         long nextPeriod = super.getActionPeriod();
 
@@ -58,6 +67,20 @@ public class Rick extends ActimatedEntity {
                 nextPeriod += super.getActionPeriod();
                 quake.scheduleAction(scheduler, world, imageStore);
             }
+
+        if (alien.isPresent()) {
+            Point alienTgt = alien.get().getPosition();
+            if (this.moveToOreBlob(world, alien.get(), scheduler)) {
+                ActimatedEntity quake = new Quake(alienTgt,
+                        imageStore.getImageList("quake"));
+
+                world.addEntity(quake);
+                nextPeriod += super.getActionPeriod();
+                quake.scheduleAction(scheduler, world, imageStore);
+            }
+        }
+
+
         }else{
             world.won = true;
         }

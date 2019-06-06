@@ -90,6 +90,17 @@ public final class VirtualWorld
             fill(255);
             textAlign(CENTER);
             text("YOU WON",width/2,height/2);
+        }else if(world.loose){
+            textSize(50);
+            fill(255);
+            textAlign(CENTER);
+            text("YOU LOOSE",width/2,height/2);
+            for(Entity e :world.getEntities()){
+                if(e instanceof Rick){
+
+                    ((Rick)e).lose();
+                }
+            }
         }
         if(enterGame && !entered){
             scheduleActions(world, scheduler, imageStore);
@@ -99,7 +110,7 @@ public final class VirtualWorld
             textSize(50);
             fill(255);
             textAlign(CENTER);
-            text("PRESS ANY KEY TO START",width/2,height/2);
+            text("PRESS ANY KEY TO START\nFind and kill the aliens\nDon't let Morty die",width/2,height/2-400);
             if(keyPressed){
                 enterGame=true;
             }
