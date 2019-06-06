@@ -49,7 +49,6 @@ public final class VirtualWorld
 
     private long next_time;
 
-
     public void settings() {
         size(VIEW_WIDTH, VIEW_HEIGHT);
     }
@@ -87,6 +86,12 @@ public final class VirtualWorld
         }
 
         view.drawViewport();
+        if(world.won){
+            textSize(50);
+            fill(255);
+            textAlign(CENTER);
+            text("YOU WON",width/2,height/2);
+        }
     }
 
     public void mousePressed() {

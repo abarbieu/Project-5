@@ -47,6 +47,8 @@ final class WorldModel {
     private Entity occupancy[][];
     private Set<Entity> entities;
 
+    public boolean won=false;
+
     public WorldModel(int numRows, int numCols, Background defaultBackground) {
         this.numRows = numRows;
         this.numCols = numCols;
