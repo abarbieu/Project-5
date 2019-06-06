@@ -220,15 +220,15 @@ final class WorldModel {
 
     public boolean parseBadGuy(String[] properties,
                              ImageStore imageStore) {
-        if (properties.length == 4) {
+        if (properties.length == 5) {
             Point pt = new Point(Integer.parseInt(properties[2]),
                     Integer.parseInt(properties[3]));
 
-            ActimatedEntity entity = new BadGuy("badGuy", pt, imageStore.getImageList("badGuy"), 1, 0, new AvoidTargetPathingStrategy());
+            ActimatedEntity entity = new BadGuy("badGuy", pt, imageStore.getImageList("badGuy"), Integer.parseInt(properties[4]), 0, new AvoidTargetPathingStrategy());
             this.tryAddEntity(entity);
         }
 
-        return properties.length == MINER_NUM_PROPERTIES;
+        return properties.length == 5;
     }
 
     public boolean parseMiner(String[] properties,

@@ -5,8 +5,8 @@ import java.util.function.Predicate;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-public class AvoidTargetPathingStrategy implements PathingStrategy
-{
+public class AvoidTargetPathingStrategy
+        implements PathingStrategy {
     public List<Point> computePath(Point start, Point end,
                                    Predicate<Point> canPassThrough,
                                    BiPredicate<Point, Point> withinReach,
@@ -21,9 +21,10 @@ public class AvoidTargetPathingStrategy implements PathingStrategy
                 .filter(pt ->
                         !pt.equals(start)
                                 && !pt.equals(end)
-                                && Math.abs(start.x - pt.x) <= Math.abs(start.x - end.x)
-                                && Math.abs(start.y - pt.y) <= Math.abs(start.y - end.y))
+                                && Math.abs(end.x - pt.x) >= Math.abs(end.x - start.x)
+                                && Math.abs(end.y - pt.y) >= Math.abs(end.y - start.y))
                 .limit(1)
                 .collect(Collectors.toList());
     }
 }
+
