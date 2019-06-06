@@ -65,9 +65,9 @@ public final class VirtualWorld
         this.view = new WorldView(VIEW_ROWS, VIEW_COLS, this, world,
                 TILE_WIDTH, TILE_HEIGHT);
         this.scheduler = new EventScheduler(timeScale);
-        TreeBuilder tB = new TreeBuilder("treeBuilder", 5000);
-        world.addEntity(tB);
-        tB.scheduleAction(scheduler, world, imageStore);
+//        TreeBuilder tB = new TreeBuilder("treeBuilder", 5000);
+//        world.addEntity(tB);
+//        tB.scheduleAction(scheduler, world, imageStore);
 
         loadImages(IMAGE_LIST_FILE_NAME, imageStore, this);
         loadWorld(world, LOAD_FILE_NAME, imageStore);
