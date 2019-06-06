@@ -37,12 +37,68 @@ public class Rick extends ActimatedEntity {
     public boolean checkValid(Point pos, WorldModel world) {
         return pos.withinBounds(world) && !pos.isOccupied(world) && !(world.getOccupancyCell(pos) instanceof Tree);
     }
+    public void executeActivity(WorldModel world,
+                                ImageStore imageStore, EventScheduler scheduler) {
 
-    public void executeActivity(WorldModel world, ImageStore imageStore, EventScheduler scheduler) {
-        if(moving) {
-            moveDir(dx, dy, world, this.view);
-            moving=false;
+
+        Optional<Entity> blobTarget = super.getPosition().findNearest(world,
+                BadGuy.class);
+
+        long nextPeriod = super.getActionPeriod();
+
+        if (blobTarget.isPresent()) {
+            Point tgtPos = blobTarget.get().getPosition();
+
+            if (this.moveToOreBlob(world, blobTarget.get(), scheduler)) {
+                ActimatedEntity quake = new Quake(tgtPos,
+                        imageStore.getImageList("quake"));
+
+                world.addEntity(quake);
+                nextPeriod += super.getActionPeriod();
+                quake.scheduleAction(scheduler, world, imageStore);
+            }
         }
+
+        scheduler.scheduleEvent(this,
+                new Activity(this, world, imageStore),
+                nextPeriod);
+    }
+
+    private boolean moveToOreBlob(WorldModel world,
+                                  Entity target, EventScheduler scheduler) {
+        if (super.getPosition().adjacent(target.getPosition())) {
+            world.removeEntity(target);
+            scheduler.unscheduleAllEvents(target);
+            return true;
+        } else {
+            if (moving) {
+                moveDir(dx, dy, world, this.view);
+                moving = false;
+                return false;
+            }
+            return false;
+        }
+    }
+    /*public void executeActivity(WorldModel world, ImageStore imageStore, EventScheduler scheduler) {
+        if (moving) {
+            moveDir(dx, dy, world, this.view);
+            moving = false;
+
+            Optional<Entity> baddie = getPosition().findNearest(world, BadGuy.class);
+            if (baddie.isPresent() && baddie.get().getPosition().adjacent(getPosition())) {
+                world.removeEntity(baddie.get());
+                scheduler.unscheduleAllEvents(baddie.get());
+                ActimatedEntity quake = new Quake(baddie.get().getPosition(),
+                        imageStore.getImageList("quake"));
+
+                world.addEntity(quake);
+                quake.scheduleAction(scheduler, world, imageStore);
+            }
+            scheduler.scheduleEvent(this,
+                    new Activity(this, world, imageStore),
+                    getActionPeriod());
+        }
+    }*/
         /*if (resourceCount >= resourceLimit) {
             Optional<Entity> fullTarget = super.getPosition().findNearest(world,
                     Tree.class);
@@ -79,7 +135,7 @@ public class Rick extends ActimatedEntity {
                         super.getActionPeriod());
             }
         }*/
-    }
+    //}
 
     /*private boolean moveToNotFull(WorldModel world,
                                   Entity target, EventScheduler scheduler) {

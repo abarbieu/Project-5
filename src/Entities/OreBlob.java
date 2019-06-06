@@ -18,11 +18,11 @@ public class OreBlob extends ActimatedEntity {
     }
 
     public void executeActivity(WorldModel world,
-                                ImageStore imageStore, EventScheduler scheduler) {
+                                 ImageStore imageStore, EventScheduler scheduler) {
 
 
         Optional<Entity> blobTarget = super.getPosition().findNearest(world,
-                Vein.class);
+                BadGuy.class);
 
         long nextPeriod = super.getActionPeriod();
 
@@ -31,7 +31,7 @@ public class OreBlob extends ActimatedEntity {
 
             if (this.moveToOreBlob(world, blobTarget.get(), scheduler)) {
                 ActimatedEntity quake = new Quake(tgtPos,
-                        imageStore.getImageList(QUAKE_KEY));
+                        imageStore.getImageList("quake"));
 
                 world.addEntity(quake);
                 nextPeriod += super.getActionPeriod();
