@@ -254,9 +254,9 @@ final class WorldModel {
                     Integer.parseInt(properties[MINER_ROW]));
             Entity entity = new Morty(properties[MINER_ID], pt,
                     imageStore.getImageList("morty"),
-                    Integer.parseInt(properties[MINER_ACTION_PERIOD]),
+                    2020,
                     Integer.parseInt(properties[MINER_ANIMATION_PERIOD]),
-                    new AStarPathingStrategy());
+                    new SingleStepPath());
             this.tryAddEntity(entity);
         }
 
