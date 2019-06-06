@@ -44,6 +44,9 @@ public class Rick extends ActimatedEntity {
 
         Optional<Entity> blobTarget = super.getPosition().findNearest(world,
                 BadGuy.class);
+        Optional<Entity> alien = super.getPosition().findNearest(world,
+                Alien.class);
+
 
         long nextPeriod = super.getActionPeriod();
 
@@ -58,6 +61,20 @@ public class Rick extends ActimatedEntity {
                 nextPeriod += super.getActionPeriod();
                 quake.scheduleAction(scheduler, world, imageStore);
             }
+
+        if (alien.isPresent()) {
+            Point alienTgt = alien.get().getPosition();
+            if (this.moveToOreBlob(world, alien.get(), scheduler)) {
+                ActimatedEntity quake = new Quake(alienTgt,
+                        imageStore.getImageList("quake"));
+
+                world.addEntity(quake);
+                nextPeriod += super.getActionPeriod();
+                quake.scheduleAction(scheduler, world, imageStore);
+            }
+        }
+
+
         }else{
             world.won = true;
         }
