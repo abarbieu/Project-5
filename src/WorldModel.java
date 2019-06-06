@@ -231,6 +231,20 @@ final class WorldModel {
         return properties.length == 5;
     }
 
+    public boolean parseAlien(String[] properties,
+                               ImageStore imageStore) {
+        if (properties.length == 5) {
+            Point pt = new Point(Integer.parseInt(properties[2]),
+                    Integer.parseInt(properties[3]));
+
+            ActimatedEntity entity = new BadGuy("alien", pt, imageStore.getImageList("alien"), 2, 0, new SingleStepPath());
+            this.tryAddEntity(entity);
+        }
+
+        return properties.length == 5;
+    }
+
+
     public boolean parseMiner(String[] properties,
                               ImageStore imageStore) {
         if (properties.length == MINER_NUM_PROPERTIES) {
@@ -300,6 +314,8 @@ final class WorldModel {
                     return this.parseVein(properties, imageStore);
                 case "badGuy":
                     return this.parseBadGuy(properties, imageStore);
+                case "alien":
+                    return this.parseAlien(properties, imageStore);
             }
         }
 

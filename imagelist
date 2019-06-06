@@ -31,3 +31,4 @@ background_default images/none.bmp
 badGuy newImages/badGuy.bmp 252 252 252 0
 morty newImages/morty.png 252 252 252 0
 morty newImages/morty2.png 252 252 252 0
+alien newImages/Alien.png 252 252 252 0
