@@ -47,6 +47,8 @@ final class WorldModel {
     private Entity occupancy[][];
     private Set<Entity> entities;
 
+    public boolean won=false;
+
     public WorldModel(int numRows, int numCols, Background defaultBackground) {
         this.numRows = numRows;
         this.numCols = numCols;
@@ -268,7 +270,7 @@ final class WorldModel {
                     Integer.parseInt(properties[MINER_ROW]));
             Entity entity = new Morty(properties[MINER_ID], pt,
                     imageStore.getImageList("morty"),
-                    2020,
+                    1800,
                     Integer.parseInt(properties[MINER_ANIMATION_PERIOD]),
                     new SingleStepPath());
             this.tryAddEntity(entity);

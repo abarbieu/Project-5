@@ -1,3 +1,4 @@
+import processing.core.PApplet;
 import processing.core.PImage;
 
 import java.awt.*;
@@ -10,7 +11,6 @@ public class Rick extends ActimatedEntity {
     private int dx,dy;
     private WorldView view;
     private boolean moving = false;
-
 
     public Rick(String id, Point position, List<PImage> images, int resourceLimit, int resourceCount, int actionPeriod, int animationPeriod, PathingStrategy p) {
         super(id, position, animationPeriod, images, 0, actionPeriod, p);
@@ -37,8 +37,9 @@ public class Rick extends ActimatedEntity {
     public boolean checkValid(Point pos, WorldModel world) {
         return pos.withinBounds(world) && !pos.isOccupied(world) && !(world.getOccupancyCell(pos) instanceof Tree);
     }
+
     public void executeActivity(WorldModel world,
-                                ImageStore imageStore, EventScheduler scheduler) {
+                          ImageStore imageStore, EventScheduler scheduler) {
 
 
         Optional<Entity> blobTarget = super.getPosition().findNearest(world,
@@ -57,6 +58,8 @@ public class Rick extends ActimatedEntity {
                 nextPeriod += super.getActionPeriod();
                 quake.scheduleAction(scheduler, world, imageStore);
             }
+        }else{
+            world.won = true;
         }
 
         scheduler.scheduleEvent(this,
