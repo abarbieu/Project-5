@@ -14,7 +14,7 @@ public class BadGuy extends ActimatedEntity {
     private static final String QUAKE_KEY = "quake";
 
     public BadGuy(String id, Point position, List<PImage> images, int actionPeriod, int animationPeriod, PathingStrategy p) {
-        super(id, position, animationPeriod, images, 0, actionPeriod ,p);
+        super(id, position, animationPeriod, images, 0, actionPeriod, p);
     }
 
     public void executeActivity(WorldModel world,
@@ -22,15 +22,23 @@ public class BadGuy extends ActimatedEntity {
 
 
         Optional<Entity> rick = super.getPosition().findNearest(world, Rick.class);
-
         if (rick.isPresent())
             super.moveNextPos(world, rick.get(), scheduler);
+        /*if (rick.isPresent()) {
+            if(moveToBadGuy(world,rick.get(),scheduler)){
+                world.removeEntity(this);
+                scheduler.unscheduleAllEvents(this);
+
+                ActimatedEntity quake = new Quake(getPosition(),imageStore.getImageList("quake"));
+                world.addEntity(quake);
+                quake.scheduleAction(scheduler,world,imageStore);
+                return;
+            }
+        }*/
 
         long nextPeriod = super.getActionPeriod();
         scheduler.scheduleEvent(this,
                 new Activity(this, world, imageStore),
                 nextPeriod);
     }
-
-
 }
