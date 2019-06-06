@@ -75,6 +75,7 @@ public final class VirtualWorld
         scheduleActions(world, scheduler, imageStore);
 
         next_time = System.currentTimeMillis() + TIMER_ACTION_PERIOD;
+        println(world.getNumCols(),world.getNumRows());
     }
 
     public void draw() {
@@ -150,7 +151,13 @@ public final class VirtualWorld
                     dx = 1;
                     break;
             }
-            view.shiftView(dx, dy);
+
+            for(Entity e : world.getEntities()){
+                if(e instanceof Rick){
+                    ((Rick)e).setMove(dx,dy,view);
+                    ((Rick)e).scheduleAction(scheduler,world,imageStore);
+                }
+            }
         } else {
             switch (key) {
                 case ('r'):
@@ -229,6 +236,10 @@ public final class VirtualWorld
                     break;
             }
         }
+    }
+
+    public WorldView getWorldView(){
+        return this.view;
     }
 
     public static void main(String[] args) {

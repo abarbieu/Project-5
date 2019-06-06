@@ -7,6 +7,9 @@ import java.util.Optional;
 public class Rick extends ActimatedEntity {
     private int resourceLimit;
     private int resourceCount;
+    private int dx,dy;
+    private WorldView view;
+    private boolean moving = false;
 
 
     public Rick(String id, Point position, List<PImage> images, int resourceLimit, int resourceCount, int actionPeriod, int animationPeriod, PathingStrategy p) {
@@ -15,8 +18,32 @@ public class Rick extends ActimatedEntity {
         this.resourceCount = resourceCount;
     }
 
+    public boolean moveDir(int dx, int dy, WorldModel world,WorldView view) {
+        Point newPoint = new Point(getPosition().x + dx, getPosition().y + dy);
+        if (checkValid(newPoint, world)) {
+            setPosition(newPoint);
+            view.shiftView(dx, dy);
+            return true;
+        }
+        return false;
+    }
+    public void setMove(int dx, int dy,WorldView view){
+        this.moving = true;
+        this.view=view;
+        this.dx=dx;
+        this.dy=dy;
+    }
+
+    public boolean checkValid(Point pos, WorldModel world) {
+        return pos.withinBounds(world) && !pos.isOccupied(world) && !(world.getOccupancyCell(pos) instanceof Tree);
+    }
+
     public void executeActivity(WorldModel world, ImageStore imageStore, EventScheduler scheduler) {
-        if (resourceCount >= resourceLimit) {
+        if(moving) {
+            moveDir(dx, dy, world, this.view);
+            moving=false;
+        }
+        /*if (resourceCount >= resourceLimit) {
             Optional<Entity> fullTarget = super.getPosition().findNearest(world,
                     Tree.class);
             Point tmpPos = null;
@@ -51,10 +78,10 @@ public class Rick extends ActimatedEntity {
                         new Activity(this, world, imageStore),
                         super.getActionPeriod());
             }
-        }
+        }*/
     }
 
-    private boolean moveToNotFull(WorldModel world,
+    /*private boolean moveToNotFull(WorldModel world,
                                   Entity target, EventScheduler scheduler) {
         if (super.getPosition().adjacent(target.getPosition())) {
             this.resourceCount += 1;
@@ -116,7 +143,9 @@ public class Rick extends ActimatedEntity {
 
         world.addEntity(miner);
         miner.scheduleAction(scheduler, world, imageStore);
-    }
+    }*/
+
+
 
 
 }
