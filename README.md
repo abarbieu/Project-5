@@ -4,5 +4,5 @@ One alien is corrupted and can kill Morty, if this happens you lose,
 unless you win first, then Morty can die. The rest of the aliens run
 away from Rick.
 
-#Purpose
+# Purpose
 Demonstrate Object Oriented and Project Based Design through abstracting game design into manageable pieces
